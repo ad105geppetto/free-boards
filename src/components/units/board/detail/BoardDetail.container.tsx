@@ -3,11 +3,10 @@ import { doc, getFirestore, getDoc, updateDoc } from "firebase/firestore";
 import { firebaseApp } from "../../../../commons/firebase";
 import { useState, useEffect } from "react";
 import { Board } from "./BoardDetail.type";
-import { useRouter } from "next/router";
+import { useMoveToPage } from "../../../commons/hooks/useMoveToPage";
 
 export default function BoardDetail() {
-  const router = useRouter();
-  const currentPath = router.asPath;
+  const { currentPath, onClickMoveToPage } = useMoveToPage();
   const [type, boardId] = currentPath.split("/").slice(1);
   const [board, setBoard] = useState<Board | null>(null);
 
@@ -47,10 +46,6 @@ export default function BoardDetail() {
     } catch (error) {
       if (error instanceof Error) alert(error.message);
     }
-  };
-
-  const onClickMoveToPage = (path: string) => () => {
-    void router.push(path);
   };
 
   return (

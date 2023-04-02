@@ -14,20 +14,19 @@ import {
 } from "firebase/firestore";
 import { firebaseApp } from "../../../../commons/firebase";
 import { useState, useEffect } from "react";
+import { useMoveToPage } from "../../../commons/hooks/useMoveToPage";
 import { Board } from "./BoardList.types";
-import { useRouter } from "next/router";
 
 export default function BoardList() {
   const [boards, setBoards] = useState<Board[]>([]);
   const [currentTopNumber, setCurrentTopNumber] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [lastPage, setLastPage] = useState(1);
-  const router = useRouter();
-  const currentPath = router.asPath;
+  const { currentPath, onClickMoveToPage } = useMoveToPage();
 
   useEffect(() => {
     async function fetchBoards() {
-      const type = router.asPath.slice(1);
+      const type = currentPath.slice(1);
       const docRef = query(
         collection(getFirestore(firebaseApp), type),
         where("deletedAt", "==", false),
@@ -112,10 +111,6 @@ export default function BoardList() {
     } catch (error) {
       if (error instanceof Error) alert(error.message);
     }
-  };
-
-  const onClickMoveToPage = (path: string) => () => {
-    void router.push(path);
   };
 
   return (

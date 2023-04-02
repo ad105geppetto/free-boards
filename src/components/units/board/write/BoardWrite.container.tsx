@@ -10,12 +10,11 @@ import { useState, useEffect, ChangeEvent } from "react";
 import { firebaseApp } from "../../../../commons/firebase";
 import { IBoardWriteProps } from "./BoardWrite.types";
 import { getDate } from "../../../../commons/utility";
+import { useMoveToPage } from "../../../commons/hooks/useMoveToPage";
 import BoardWriteUI from "./BoardWrite.presenter";
-import { useRouter } from "next/router";
 
 export default function BoardWrite(props: IBoardWriteProps) {
-  const router = useRouter();
-  const currentPath = router.asPath;
+  const { currentPath, onClickMoveToPage } = useMoveToPage();
   const [type, boardId] = currentPath.split("/").slice(1);
   const [writer, setWriter] = useState("");
   const [password, setPassword] = useState("");
@@ -55,10 +54,6 @@ export default function BoardWrite(props: IBoardWriteProps) {
 
   const onChangeContents = (event: ChangeEvent<HTMLInputElement>) => {
     setContents(event.target.value);
-  };
-
-  const onClickMoveToPage = (path: string) => () => {
-    void router.push(path);
   };
 
   const onClickSubmit = async () => {

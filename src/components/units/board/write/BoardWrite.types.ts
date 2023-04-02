@@ -9,10 +9,13 @@ export interface IBoardWriteUIProps {
   writer: string;
   title: string;
   contents: string;
+  isOpen: boolean;
+  errorMessage: string;
   onChangeWriter: (event: ChangeEvent<HTMLInputElement>) => void;
   onChangePassword: (event: ChangeEvent<HTMLInputElement>) => void;
   onChangeTitle: (event: ChangeEvent<HTMLInputElement>) => void;
   onChangeContents: (event: ChangeEvent<HTMLInputElement>) => void;
   onClickSubmit: () => void;
   onClickUpdate: () => void;
+  onClose: () => void;
 }

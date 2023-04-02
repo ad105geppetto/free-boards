@@ -10,6 +10,12 @@ export interface IBoardDetailUIProps {
   type: string;
   board: Board | null;
   boardId: string;
+  isOpen: boolean;
+  errorMessage: string;
+  isDeleteModalOpen: boolean;
+  isUpdateModalOpen: boolean;
   onClickMoveToPage: (path: string) => () => void;
-  onClickDelete: () => void;
+  handleDelete: () => void;
+  handleEdit: () => void;
+  onClose: () => void;
 }

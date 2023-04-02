@@ -1,13 +1,17 @@
-import { Board, IBoardListUIProps, TRoutes } from "./BoardList.types";
 import * as S from "./BoardList.styles";
+import { Board, IBoardListUIProps, TRoutes } from "./BoardList.types";
+import Modal02 from "../../../commons/modals/modal02";
 
 const routes: TRoutes = {
-  "/free-boards": "자유게시판",
+  "/free-boards/": "자유게시판",
 };
 
 export default function BoardListUI(props: IBoardListUIProps) {
   return (
     <S.Container>
+      {props.isOpen && (
+        <Modal02 errorMessage={props.errorMessage} onClose={props.onClose} />
+      )}
       <S.Wapper>
         <S.BoardTitle>{routes[props.pathname]}</S.BoardTitle>
         <S.BoardTable>
@@ -19,7 +23,7 @@ export default function BoardListUI(props: IBoardListUIProps) {
           {props.boards.map((board: Board, index: number) => (
             <S.Board
               key={board.id}
-              onClick={props.onClickMoveToPage(`${props.pathname}/${board.id}`)}
+              onClick={props.onClickMoveToPage(`${props.pathname}${board.id}`)}
             >
               <S.Number>{props.currentTopNumber - index}</S.Number>
               <S.Title>{board.title}</S.Title>
@@ -29,7 +33,7 @@ export default function BoardListUI(props: IBoardListUIProps) {
         </S.BoardTable>
         <S.ButtonWrapper>
           <S.WriteButton
-            onClick={props.onClickMoveToPage(`${props.pathname}/new`)}
+            onClick={props.onClickMoveToPage(`${props.pathname}new`)}
           >
             게시글 작성
           </S.WriteButton>

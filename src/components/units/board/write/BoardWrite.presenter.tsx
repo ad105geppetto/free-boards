@@ -1,9 +1,13 @@
 import * as S from "./BoardWrite.styles";
 import { IBoardWriteUIProps } from "./BoardWrite.types";
+import Modal02 from "../../../commons/modals/modal02";
 
 export default function BoardWriteUI(props: IBoardWriteUIProps) {
   return (
     <S.Container>
+      {props.isOpen && (
+        <Modal02 errorMessage={props.errorMessage} onClose={props.onClose} />
+      )}
       <S.Wapper>
         <S.WritingHeader>
           <S.BoardWriteTitle>
@@ -15,24 +19,24 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
             {props.isEdit ? "수정하기" : "등록하기"}
           </S.SubmitButton>
         </S.WritingHeader>
-        <S.UserInfoWrapper>
-          <S.Writer
-            onChange={props.onChangeWriter}
-            type="text"
-            placeholder="작성자명을 입력해주세요."
-            value={props.writer}
-          />
-          {props.isEdit ? (
-            ""
-          ) : (
+        {props.isEdit ? (
+          ""
+        ) : (
+          <S.UserInfoWrapper>
+            <S.Writer
+              onChange={props.onChangeWriter}
+              type="text"
+              placeholder="작성자명을 입력해주세요."
+              value={props.writer}
+            />
             <S.Password
               onChange={props.onChangePassword}
               type="password"
               placeholder="비밀번호를 입력해주세요."
-              autoComplete="new-password"
+              autoComplete="off"
             />
-          )}
-        </S.UserInfoWrapper>
+          </S.UserInfoWrapper>
+        )}
         <S.Title
           onChange={props.onChangeTitle}
           type="text"

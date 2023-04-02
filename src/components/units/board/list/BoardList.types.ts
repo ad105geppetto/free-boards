@@ -5,6 +5,9 @@ export interface IBoardListUIProps {
   pathname: string;
   currentTopNumber: number;
   lastPage: number;
+  isOpen: boolean;
+  errorMessage: string;
+  onClose: () => void;
   onClickMoveToPage: (path: string) => () => void;
   onClickNextButton: () => void;
   onClickPrevButton: () => void;

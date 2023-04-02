@@ -12,6 +12,7 @@ import { IBoardWriteProps } from "./BoardWrite.types";
 import { getDate } from "../../../../commons/utility";
 import { useMoveToPage } from "../../../commons/hooks/useMoveToPage";
 import BoardWriteUI from "./BoardWrite.presenter";
+import { useModalErrorState } from "../../../commons/hooks/useModalErrorState";
 
 export default function BoardWrite(props: IBoardWriteProps) {
   const { currentPath, onClickMoveToPage } = useMoveToPage();
@@ -20,39 +21,79 @@ export default function BoardWrite(props: IBoardWriteProps) {
   const [password, setPassword] = useState("");
   const [title, setTitle] = useState("");
   const [contents, setContents] = useState("");
+  const { errorMessage, setErrorMessage, isOpen, onClose } =
+    useModalErrorState();
 
   useEffect(() => {
     if (!props.isEdit) return;
+    let cancelled = false;
 
-    async function fetchBoards() {
+    async function fetchBoard() {
       const docRef = doc(getFirestore(firebaseApp), type, boardId);
       const docSnap = await getDoc(docRef);
 
-      if (docSnap.exists()) {
-        const { writer, title, contents } = docSnap.data();
-        setWriter(writer);
-        setTitle(title);
-        setContents(contents);
-      } else {
-        alert("잘못된 요청입니다.");
+      if (!cancelled) {
+        if (docSnap.exists()) {
+          const { writer, title, contents } = docSnap.data();
+          setWriter(writer);
+          setTitle(title);
+          setContents(contents);
+        } else {
+          setErrorMessage("잘못된 요청입니다.");
+          onClose();
+        }
       }
     }
-    void fetchBoards();
+    void fetchBoard();
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const onChangeWriter = (event: ChangeEvent<HTMLInputElement>) => {
+    if (event.target.value.length > 8) {
+      setErrorMessage("작성자명은 8자 이하입니다.");
+      onClose();
+      return;
+    }
+    if (event.target.value[0] === " ") {
+      setErrorMessage("첫글자는 공백이 불가합니다.");
+      onClose();
+      return;
+    }
     setWriter(event.target.value);
   };
 
   const onChangePassword = (event: ChangeEvent<HTMLInputElement>) => {
+    if (event.target.value.length > 12) {
+      setErrorMessage("비밀번호는 6~12자 입니다.");
+      onClose();
+      return;
+    }
+    if (event.target.value.includes(" ")) {
+      setErrorMessage("비밀번호는 공백이 불가합니다.");
+      onClose();
+      return;
+    }
     setPassword(event.target.value);
   };
 
   const onChangeTitle = (event: ChangeEvent<HTMLInputElement>) => {
+    if (event.target.value.length > 20) {
+      setErrorMessage("제목은 최대 20자 입니다.");
+      onClose();
+      return;
+    }
     setTitle(event.target.value);
   };
 
   const onChangeContents = (event: ChangeEvent<HTMLInputElement>) => {
+    if (event.target.value.length > 200) {
+      setErrorMessage("내용은 최대 200자 입니다.");
+      onClose();
+      return;
+    }
     setContents(event.target.value);
   };
 
@@ -60,20 +101,26 @@ export default function BoardWrite(props: IBoardWriteProps) {
     const collectionId = currentPath.split("/")[1];
     const board = collection(getFirestore(firebaseApp), collectionId);
 
+    const trimmedTitleText = title.trim();
+
     if (!writer) {
-      alert("작성자명을 작성해주세요.");
+      setErrorMessage("작성자명을 작성해주세요.");
+      onClose();
       return;
     }
     if (!password) {
-      alert("비밀번호를 작성해주세요.");
+      setErrorMessage("비밀번호를 작성해주세요.");
+      onClose();
       return;
     }
-    if (!title) {
-      alert("제목을 작성해주세요.");
+    if (!trimmedTitleText) {
+      setErrorMessage("제목을 작성해주세요.");
+      onClose();
       return;
     }
     if (!contents) {
-      alert("내용을 작성해주세요.");
+      setErrorMessage("내용을 작성해주세요.");
+      onClose();
       return;
     }
 
@@ -81,7 +128,7 @@ export default function BoardWrite(props: IBoardWriteProps) {
       await addDoc(board, {
         writer,
         password,
-        title,
+        title: trimmedTitleText,
         contents,
         createdAt: getDate(),
         deletedAt: false,
@@ -90,7 +137,10 @@ export default function BoardWrite(props: IBoardWriteProps) {
 
       onClickMoveToPage(`/${collectionId}`)();
     } catch (error) {
-      if (error instanceof Error) alert(error.message);
+      if (error instanceof Error) {
+        setErrorMessage("잘못된 요청입니다.");
+        onClose();
+      }
     }
   };
 
@@ -107,7 +157,10 @@ export default function BoardWrite(props: IBoardWriteProps) {
 
       onClickMoveToPage(`/${collectionId}`)();
     } catch (error) {
-      if (error instanceof Error) alert(error.message);
+      if (error instanceof Error) {
+        setErrorMessage("잘못된 요청입니다.");
+        onClose();
+      }
     }
   };
 
@@ -117,12 +170,15 @@ export default function BoardWrite(props: IBoardWriteProps) {
       writer={writer}
       title={title}
       contents={contents}
+      isOpen={isOpen}
+      errorMessage={errorMessage}
       onChangeWriter={onChangeWriter}
       onChangePassword={onChangePassword}
       onChangeTitle={onChangeTitle}
       onChangeContents={onChangeContents}
       onClickSubmit={onClickSubmit}
       onClickUpdate={onClickUpdate}
+      onClose={onClose}
     />
   );
 }

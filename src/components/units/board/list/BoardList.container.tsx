@@ -1,6 +1,5 @@
 import BoardListUI from "./BoardList.presenter";
 import {
-  getCountFromServer,
   getFirestore,
   collection,
   getDocs,
@@ -13,9 +12,11 @@ import {
   where,
 } from "firebase/firestore";
 import { firebaseApp } from "../../../../commons/firebase";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useMoveToPage } from "../../../commons/hooks/useMoveToPage";
 import { Board } from "./BoardList.types";
+import { useModalErrorState } from "../../../commons/hooks/useModalErrorState";
+import useFetchBoardsOnMount from "../../../commons/hooks/useFetchBoardsOnMount";
 
 export default function BoardList() {
   const [boards, setBoards] = useState<Board[]>([]);
@@ -23,55 +24,32 @@ export default function BoardList() {
   const [currentPage, setCurrentPage] = useState(1);
   const [lastPage, setLastPage] = useState(1);
   const { currentPath, onClickMoveToPage } = useMoveToPage();
+  const { errorMessage, setErrorMessage, isOpen, onClose } =
+    useModalErrorState();
 
-  useEffect(() => {
-    async function fetchBoards() {
-      const type = currentPath.slice(1);
-      const docRef = query(
-        collection(getFirestore(firebaseApp), type),
-        where("deletedAt", "==", false),
-        orderBy("date", "desc"),
-        limit(10)
-      );
-      const docCountRef = query(
-        collection(getFirestore(firebaseApp), type),
-        where("deletedAt", "==", false)
-      );
-
-      try {
-        const docSnaps = await getDocs(docRef);
-        const docSnapCount = await getCountFromServer(docCountRef);
-
-        const datas = docSnaps.docs.map((el) => ({ id: el.id, ...el.data() }));
-        const totalCount = docSnapCount.data().count;
-
-        if (datas) {
-          setBoards(datas);
-          setCurrentTopNumber(totalCount);
-          setLastPage(Math.ceil(totalCount / 10));
-          return;
-        }
-      } catch (error) {
-        if (error instanceof Error) alert(error.message);
-      }
-    }
-
-    void fetchBoards();
-  }, []);
-
+  useFetchBoardsOnMount({
+    currentPath,
+    setBoards,
+    setCurrentTopNumber,
+    setLastPage,
+    setErrorMessage,
+    onClose,
+  });
+  console.log("hihi");
   const onClickPrevButton = async () => {
     if (currentPage <= 1) return;
 
     const type = currentPath.slice(1);
-    const docRef = query(
-      collection(getFirestore(firebaseApp), type),
-      where("deletedAt", "==", false),
-      orderBy("date", "desc"),
-      endBefore(boards[0].date),
-      limitToLast(10)
-    );
 
     try {
+      const docRef = query(
+        collection(getFirestore(firebaseApp), type),
+        where("deletedAt", "==", false),
+        orderBy("date", "desc"),
+        endBefore(boards[0].date),
+        limitToLast(10)
+      );
+
       const result = await getDocs(docRef);
       const datas = result.docs.map((el) => ({ id: el.id, ...el.data() }));
 
@@ -82,7 +60,10 @@ export default function BoardList() {
         return;
       }
     } catch (error) {
-      if (error instanceof Error) alert(error.message);
+      if (error instanceof Error) {
+        setErrorMessage("잘못된 요청입니다.");
+        onClose();
+      }
     }
   };
 
@@ -90,15 +71,16 @@ export default function BoardList() {
     if (currentPage >= lastPage) return;
 
     const type = currentPath.slice(1);
-    const docRef = query(
-      collection(getFirestore(firebaseApp), type),
-      where("deletedAt", "==", false),
-      orderBy("date", "desc"),
-      startAfter(boards[boards.length - 1].date),
-      limit(10)
-    );
 
     try {
+      const docRef = query(
+        collection(getFirestore(firebaseApp), type),
+        where("deletedAt", "==", false),
+        orderBy("date", "desc"),
+        startAfter(boards[boards.length - 1].date),
+        limit(10)
+      );
+
       const result = await getDocs(docRef);
       const datas = result.docs.map((el) => ({ id: el.id, ...el.data() }));
 
@@ -109,7 +91,10 @@ export default function BoardList() {
         return;
       }
     } catch (error) {
-      if (error instanceof Error) alert(error.message);
+      if (error instanceof Error) {
+        setErrorMessage("잘못된 요청입니다.");
+        onClose();
+      }
     }
   };
 
@@ -119,6 +104,9 @@ export default function BoardList() {
       pathname={currentPath}
       currentTopNumber={currentTopNumber}
       lastPage={lastPage}
+      isOpen={isOpen}
+      errorMessage={errorMessage}
+      onClose={onClose}
       onClickMoveToPage={onClickMoveToPage}
       onClickNextButton={onClickNextButton}
       onClickPrevButton={onClickPrevButton}

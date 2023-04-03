@@ -1,13 +1,63 @@
 <div align=center>
-<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=250&section=header&text=📦Used-Item-Boards📦&fontSize=45" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=250&section=header&text=📦Free-Boards📦&fontSize=45" />
   </br>
   <h3>📚 STACKS</h3>
   <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=Axios&logoColor=white">
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=NestJS&logoColor=white">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white">
-  <img src="https://img.shields.io/badge/recoil-007AF4?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjI1MDAiIHdpZHRoPSIyMzY4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjMwIDExIDI3LjUgNzgiPjxyZWN0IGZpbGw9IiMwMDdhZjQiIGhlaWdodD0iOTUiIHJ4PSIxMCIgd2lkdGg9IjkwIi8+PGNpcmNsZSBjeD0iNDMuNSIgY3k9IjE4LjUiIGZpbGw9IiNmZmYiIHI9IjcuNSIvPjxjaXJjbGUgY3g9IjQzLjUiIGN5PSI4MS41IiBmaWxsPSIjZmZmIiByPSI3LjUiLz48ZyBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyI+PHBhdGggZD0iTTQzLjk5OSAyNUM0Mi41IDM3IDU3LjUgMzQgNTcuNSA0Mi41YzAgNS01Ljg3OCA2LjM2NS0xMy41MDEgN0MzNy45OTkgNTAgMzAgNTAgMzAgNThzMTYgNS41IDEzLjk5OSAxN00zNC4xMzIgMzMuMzUzYzAgMTUuMjg5IDIzLjE1IDE4LjI4OSAyMy4xNSAzMi42MiIvPjwvZz48L3N2Zz4=">
   <img src="https://img.shields.io/badge/Emotion-C43BAD?style=for-the-badge&logo=">
 </div>
+
+## 목차
+
+1. [서비스 개요](#서비스-개요)
+2. [요구사항 분석 및 구현](#요구사항-분석-및-구현)
+3. [구현](#구현)
+4. [Test](#test)
+   - Unit Test / Integration Test
+5. [Commit Convention](#commit-convention)
+
+## 서비스 개요
+
+- 익명 게시판 서비스
+- 익명으로 사용되는 서비스이므로 로그인 절차는 생략되었으며, 오직 게시글의 비밀번호만으로 작성자를 구분합니다.
+
+## 요구사항 분석 및 구현
+
+- 사용자는 게시글을 올릴 수 있습니다.
+  - 게시글은 제목과 본문, 작성자명, 날짜로 구성됩니다.
+  - 작성자명은 최대 8자, 첫글자는 공백이 불가합니다.
+  - 제목은 최대 20 자, 본문은 200 자로 제한해야 합니다.
+  - 제목과 본문 모두 이모지가 포함될 수 있습니다.
+- 사용자는 게시글을 올릴 때 비밀번호를 설정할 수 있습니다. 추후 본인이 작성한 게시물에 비밀번호 입력 후 수정, 삭제할 수 있습니다.
+  - 회원 가입, 로그인 없이 비밀번호만 일치하면 수정, 삭제가 가능합니다.
+  - 비밀번호는 비밀번호는 6~12자 이며, 공백이 불가합니다.
+- 모든 사용자는 한 페이지 내에서 모든 게시글을 최신 글 순서로 확인할 수 있습니다.
+- Landing Page를 제공합니다.
+
+## 구현
+
+#### Landing Page
+
+<img src="https://user-images.githubusercontent.com/92367032/229455706-6d3427b7-0f91-4ef9-b48a-304bd1c9acc7.gif" />
+
+#### 자유게시판 목록
+
+<img src="https://user-images.githubusercontent.com/92367032/229455527-41e686b2-12dc-487f-b2da-43e243efc7eb.gif"/>
+
+#### 자유게시판 등록
+
+<img src="https://user-images.githubusercontent.com/92367032/229455578-b4eb9ed7-e62f-465e-aab6-34b11fe93281.gif"/>
+
+#### 자유게시판 수정
+
+<img src="https://user-images.githubusercontent.com/92367032/229455646-1b47f323-49ba-4212-85e1-f8830d82b04b.gif"/>
+
+#### 자유게시판 삭제
+
+<img src="https://user-images.githubusercontent.com/92367032/229455673-e071b751-f59f-4c8c-9587-2db27a0d2b36.gif"/>
+
+## Test
 
 ## Commit Convention
 

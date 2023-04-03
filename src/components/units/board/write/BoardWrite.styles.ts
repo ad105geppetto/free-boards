@@ -10,6 +10,15 @@ export const Wapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 1156px;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin: 0 20px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1156px) {
+    width: 100%;
+    margin: 0 50px;
+  }
 `;
 
 export const WritingHeader = styled.div`
@@ -23,6 +32,10 @@ export const WritingHeader = styled.div`
 
 export const BoardWriteTitle = styled.h1`
   font-size: 32px;
+
+  @media screen and (max-width: 1156px) {
+    font-size: 24px;
+  }
 `;
 
 export const SubmitButton = styled.button`

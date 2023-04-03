@@ -19,6 +19,10 @@ export const Modal = styled.div`
   height: 250px;
   background-color: white;
   border-radius: 10px;
+
+  @media screen and (max-width: 767px) {
+    margin: 0 20px;
+  }
 `;
 
 export const TitleWrapper = styled.div`

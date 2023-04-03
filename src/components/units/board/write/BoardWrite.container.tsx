@@ -21,10 +21,25 @@ export default function BoardWrite(props: IBoardWriteProps) {
   const [password, setPassword] = useState("");
   const [title, setTitle] = useState("");
   const [contents, setContents] = useState("");
+  const [placeHolderWriter, setPlaceHolderWriter] =
+    useState("작성자명을 입력해주세요.");
+  const [placeHolderPassword, setPlaceHolderPassword] =
+    useState("비밀번호를 입력해주세요.");
+  const [placeHolderTitle, setPlaceHolderTitle] =
+    useState("제목을 입력해주세요.");
+  const [placeHolderContents, setPlaceHolderContents] =
+    useState("내용을 입력해주세요.");
   const { errorMessage, setErrorMessage, isOpen, onClose } =
     useModalErrorState();
 
   useEffect(() => {
+    if (window.innerWidth <= 1156) {
+      setPlaceHolderWriter("작성자명");
+      setPlaceHolderPassword("비밀번호");
+      setPlaceHolderTitle("제목");
+      setPlaceHolderContents("내용");
+    }
+
     if (!props.isEdit) return;
     let cancelled = false;
 
@@ -172,6 +187,10 @@ export default function BoardWrite(props: IBoardWriteProps) {
       contents={contents}
       isOpen={isOpen}
       errorMessage={errorMessage}
+      placeHolderWriter={placeHolderWriter}
+      placeHolderPassword={placeHolderPassword}
+      placeHolderTitle={placeHolderTitle}
+      placeHolderContents={placeHolderContents}
       onChangeWriter={onChangeWriter}
       onChangePassword={onChangePassword}
       onChangeTitle={onChangeTitle}

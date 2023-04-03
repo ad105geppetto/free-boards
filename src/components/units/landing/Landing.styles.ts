@@ -122,6 +122,13 @@ export const ImageIconWrapper = styled.div`
   height: 1000px;
   margin-top: 150px;
   overflow-y: hidden;
+
+  @media screen and (max-width: 767px) {
+    height: 550px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1156px) {
+    height: 660px;
+  }
 `;
 
 export const ImageIcon = styled.img`
@@ -179,5 +186,81 @@ export const ImageIcon = styled.img`
   &.show {
     animation: appear-bottom-to-top 0.75s ease;
     animation-fill-mode: forwards;
+  }
+  @media screen and (max-width: 767px) {
+    &#image_1 {
+      width: 100px;
+      height: 100px;
+      bottom: 10%;
+      left: 0;
+    }
+    &#image_2 {
+      width: 230px;
+      height: 230px;
+      top: 35%;
+      right: 29%;
+    }
+    &#image_3 {
+      width: 100px;
+      height: 100px;
+      bottom: 5%;
+      left: 15%;
+    }
+    &#image_4 {
+      width: 150px;
+      height: 150px;
+      top: 10%;
+      left: 1%;
+    }
+    &#image_5 {
+      width: 180px;
+      height: 180px;
+      bottom: 0;
+      right: 1%;
+    }
+    &#image_6 {
+      width: 210px;
+      height: 210px;
+      top: 0;
+      right: 1%;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1156px) {
+    &#image_1 {
+      width: 200px;
+      height: 200px;
+      bottom: 10%;
+      left: 0;
+    }
+    &#image_2 {
+      width: 400px;
+      height: 400px;
+      top: 20%;
+      right: 26%;
+    }
+    &#image_3 {
+      width: 200px;
+      height: 200px;
+      bottom: 5%;
+      left: 15%;
+    }
+    &#image_4 {
+      width: 300px;
+      height: 300px;
+      top: 0;
+      left: 1%;
+    }
+    &#image_5 {
+      width: 300px;
+      height: 300px;
+      bottom: 0;
+      right: 1%;
+    }
+    &#image_6 {
+      width: 250px;
+      height: 300px;
+      top: 0;
+      right: 1%;
+    }
   }
 `;

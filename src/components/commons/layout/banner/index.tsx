@@ -4,7 +4,7 @@ export default function Banner() {
   return (
     <S.Container>
       <S.Wapper>
-        <img
+        <S.BannerImage
           src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/banner02.webp?alt=media"
           alt="banner"
         />

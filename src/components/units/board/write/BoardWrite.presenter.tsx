@@ -26,13 +26,13 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
             <S.Writer
               onChange={props.onChangeWriter}
               type="text"
-              placeholder="작성자명을 입력해주세요."
+              placeholder={props.placeHolderWriter}
               value={props.writer}
             />
             <S.Password
               onChange={props.onChangePassword}
               type="password"
-              placeholder="비밀번호를 입력해주세요."
+              placeholder={props.placeHolderPassword}
               autoComplete="off"
             />
           </S.UserInfoWrapper>
@@ -40,13 +40,13 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
         <S.Title
           onChange={props.onChangeTitle}
           type="text"
-          placeholder="제목을 입력해주세요."
+          placeholder={props.placeHolderTitle}
           value={props.title}
         />
         <S.Contents
           onChange={props.onChangeContents}
           type="text"
-          placeholder="내용"
+          placeholder={props.placeHolderContents}
           value={props.contents}
         />
       </S.Wapper>

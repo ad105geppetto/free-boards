@@ -10,12 +10,25 @@ export const Wapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 1156px;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin: 0 20px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1156px) {
+    width: 100%;
+    margin: 0 50px;
+  }
 `;
 
 export const BoardTitle = styled.h1`
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 32px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+  }
 `;
 
 export const BoardTable = styled.div`
@@ -45,6 +58,19 @@ export const Number = styled.div`
   padding: 10px 0;
   text-align: center;
   border: 1px solid black;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 55px;
+    font-size: 12px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1156px) {
+    width: 15%;
+  }
 `;
 
 export const Writer = styled.div`
@@ -54,14 +80,41 @@ export const Writer = styled.div`
   padding: 10px 0;
   text-align: center;
   border: 1px solid black;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 55px;
+    font-size: 12px;
+    padding: 10px 5px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1156px) {
+    width: 20%;
+  }
 `;
 
 export const Title = styled.div`
   width: 75%;
   margin-top: -1px;
   margin-left: -1px;
-  padding: 10px 10px 0;
+  padding: 10px 10px;
   border: 1px solid black;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: 55px;
+    font-size: 12px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1156px) {
+    width: 65%;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
@@ -83,6 +136,10 @@ export const WriteButton = styled.button`
   :hover {
     background-color: black;
     color: white;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
   }
 `;
 
@@ -107,18 +164,11 @@ export const PrevButton = styled.button`
     background-color: black;
     color: white;
   }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
 `;
-
-// export const PagenationButton = styled.button`
-//   height: 40px;
-//   padding: 0 5px;
-//   cursor: pointer;
-
-//   :hover {
-//     text-decoration-line: underline;
-//     text-underline-position: under;
-//   }
-// `;
 
 export const NextButton = styled.button`
   height: 40px;
@@ -132,5 +182,9 @@ export const NextButton = styled.button`
   :hover {
     background-color: black;
     color: white;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
   }
 `;

@@ -10,6 +10,15 @@ export const Wapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 1156px;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin: 0 20px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1156px) {
+    width: 100%;
+    margin: 0 50px;
+  }
 `;
 
 export const ArticleTop = styled.div`
@@ -85,6 +94,11 @@ export const DeleteButton = styled.button`
     background-color: black;
     color: white;
   }
+
+  @media screen and (max-width: 767px) {
+    width: 120px;
+    font-size: 14px;
+  }
 `;
 
 export const EditButton = styled.button`
@@ -99,5 +113,10 @@ export const EditButton = styled.button`
   :hover {
     background-color: black;
     color: white;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 120px;
+    font-size: 14px;
   }
 `;

@@ -35,7 +35,7 @@ export default function BoardList() {
     setErrorMessage,
     onClose,
   });
-  console.log("hihi");
+
   const onClickPrevButton = async () => {
     if (currentPage <= 1) return;
 

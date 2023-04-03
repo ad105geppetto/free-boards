@@ -59,9 +59,5 @@ export default function useFetchBoardsOnMount(props: IProps) {
     }
 
     void fetchBoards();
-
-    return () => {
-      void fetchBoards();
-    };
   }, []);
 }

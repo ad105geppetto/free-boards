@@ -14,7 +14,7 @@
 2. [요구사항 분석 및 구현](#요구사항-분석-및-구현)
 3. [구현](#구현)
 4. [Test](#test)
-   - Unit Test / Integration Test
+   - Unit Test
 5. [Commit Convention](#commit-convention)
 
 ## 서비스 개요
@@ -58,6 +58,8 @@
 <img src="https://user-images.githubusercontent.com/92367032/229455673-e071b751-f59f-4c8c-9587-2db27a0d2b36.gif"/>
 
 ## Test
+
+<img src="https://user-images.githubusercontent.com/92367032/229501012-a1fc45b1-5abb-418f-a87b-a976120a092f.png" width=450 height=250px/>
 
 ## Commit Convention
 

@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`랜딩 페이지 Unit Test 랜딩 페이지 스냅샷 테스트 1`] = `
+<div>
+  <div
+    class="css-1ol1jm3"
+  >
+    <div
+      class="css-aq3xj0"
+    >
+      <div
+        class="css-bmik2f"
+      >
+        <img
+          alt="transaction"
+          class="css-dg7it9"
+          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/trading-icon.webp?alt=media"
+        />
+      </div>
+      <div
+        class="css-15rv61c"
+      >
+        <p
+          class="css-1xtk7qn"
+        >
+          모두가 사용한 게시판
+        </p>
+        <p
+          class="css-1xtk7qn"
+        >
+          요즘 게시판은 여기지!
+        </p>
+      </div>
+      <div
+        class="css-nvh3z5"
+      >
+        <div
+          class="css-g90fw7"
+        >
+          Join us!
+        </div>
+        <img
+          alt="down-arrow"
+          class="css-1uh7s7m"
+          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/down-arrow-icon.webp?alt=media"
+        />
+      </div>
+      <ul
+        class="css-pgji8g"
+      >
+        <li
+          class="list-item css-a71zpr"
+        >
+          자유게시판
+        </li>
+        <li
+          class="list-item css-1c4qo8s"
+        >
+          글쓰기
+        </li>
+        <li
+          class="list-item css-18ldrg7"
+        >
+          좋은 글귀 추천
+        </li>
+        <li
+          class="list-item css-1c4qo8s"
+        >
+          출석체크?
+        </li>
+        <li
+          class="list-item css-a71zpr"
+        >
+          글을 수정하려면?
+        </li>
+        <li
+          class="list-item css-18ldrg7"
+        >
+          좋은 게시판이였다!
+        </li>
+        <li
+          class="list-item css-a71zpr"
+        >
+          자유게시판
+        </li>
+        <li
+          class="list-item css-1c4qo8s"
+        >
+          글쓰기
+        </li>
+        <li
+          class="list-item css-18ldrg7"
+        >
+          좋은 글귀 추천
+        </li>
+        <li
+          class="list-item css-1c4qo8s"
+        >
+          출석체크?
+        </li>
+        <li
+          class="list-item css-a71zpr"
+        >
+          글을 수정하려면?
+        </li>
+        <li
+          class="list-item css-18ldrg7"
+        >
+          좋은 게시판이였다!
+        </li>
+        <li
+          class="list-item css-a71zpr"
+        >
+          자유게시판
+        </li>
+        <li
+          class="list-item css-1c4qo8s"
+        >
+          글쓰기
+        </li>
+        <li
+          class="list-item css-18ldrg7"
+        >
+          좋은 글귀 추천
+        </li>
+        <li
+          class="list-item css-1c4qo8s"
+        >
+          출석체크?
+        </li>
+        <li
+          class="list-item css-a71zpr"
+        >
+          글을 수정하려면?
+        </li>
+        <li
+          class="list-item css-18ldrg7"
+        >
+          좋은 게시판이였다!
+        </li>
+      </ul>
+      <div
+        class="css-gpqih7"
+      >
+        <img
+          alt="author"
+          class="image-icon css-4i3i7k"
+          id="image_1"
+          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/author.webp?alt=media"
+        />
+        <img
+          alt="freindship"
+          class="image-icon css-4i3i7k"
+          id="image_2"
+          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/friendship.webp?alt=media"
+        />
+        <img
+          alt="librarian"
+          class="image-icon css-4i3i7k"
+          id="image_3"
+          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/librarian.webp?alt=media"
+        />
+        <img
+          alt="reporter-m"
+          class="image-icon css-4i3i7k"
+          id="image_4"
+          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/reporter_m.webp?alt=media"
+        />
+        <img
+          alt="reporter-w"
+          class="image-icon css-4i3i7k"
+          id="image_5"
+          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/reporter_w.webp?alt=media"
+        />
+        <img
+          alt="social"
+          class="image-icon css-4i3i7k"
+          id="image_6"
+          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/social.webp?alt=media"
+        />
+        <img
+          alt="author"
+          class="image-icon css-4i3i7k"
+          id="image_1"
+          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/author.webp?alt=media"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`자유게시판 상세 페이지 Unit Test 게시판 상세 페이지 스냅샷 테스트 1`] = `
+<div>
+  <div
+    class="css-1ol1jm3"
+  >
+    <div
+      class="css-ztv6jj"
+    >
+      <div
+        class="css-1c0ijag"
+      >
+        <button
+          class="css-1yx0ghv"
+        >
+          목록
+        </button>
+      </div>
+      <div
+        class="css-1adekgn"
+      >
+        <div
+          class="css-1ib302a"
+        >
+          <h3
+            class="css-xno0ws"
+          >
+            게시글 제목
+          </h3>
+          <div
+            class="css-rb483s"
+          >
+            홍길동
+          </div>
+          <div
+            class="css-uahybi"
+          >
+            2023.04.01. 15:37
+          </div>
+        </div>
+        <div
+          class="css-lz1axn"
+        >
+          게시글 내용
+        </div>
+      </div>
+      <div
+        class="css-e2whbd"
+      >
+        <button
+          class="css-1df5twa"
+        >
+          게시글 삭제하기
+        </button>
+        <button
+          class="css-1df5twa"
+        >
+          게시글 수정하기
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

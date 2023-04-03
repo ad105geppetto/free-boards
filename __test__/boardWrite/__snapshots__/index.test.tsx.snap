@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`자유게시판 등록 페이지 Unit Test 게시판 등록 페이지 스냅샷 테스트 1`] = `
+<div>
+  <div
+    class="css-1ol1jm3"
+  >
+    <div
+      class="css-ztv6jj"
+    >
+      <div
+        class="css-1sfvxye"
+      >
+        <h1
+          class="css-6mhaqy"
+        >
+          게시글 
+          등록
+        </h1>
+        <button
+          class="css-4jgba0"
+        >
+          등록하기
+        </button>
+      </div>
+      <div
+        class="css-1d57vsu"
+      >
+        <input
+          class="css-5ayked"
+          placeholder="작성자명을 입력해주세요."
+          type="text"
+          value=""
+        />
+        <input
+          autocomplete="off"
+          class="css-5ayked"
+          placeholder="비밀번호를 입력해주세요."
+          type="password"
+        />
+      </div>
+      <input
+        class="css-15hy2u7"
+        placeholder="제목을 입력해주세요."
+        type="text"
+        value=""
+      />
+      <input
+        class="css-1u3mfel"
+        placeholder="내용을 입력해주세요."
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`자유게시판 수정 페이지 Unit Test 게시판 수정 페이지 스냅샷 테스트 1`] = `
+<div>
+  <div
+    class="css-1ol1jm3"
+  >
+    <div
+      class="css-ztv6jj"
+    >
+      <div
+        class="css-1sfvxye"
+      >
+        <h1
+          class="css-6mhaqy"
+        >
+          게시글 
+          수정
+        </h1>
+        <button
+          class="css-4jgba0"
+        >
+          수정하기
+        </button>
+      </div>
+      
+      <input
+        class="css-15hy2u7"
+        placeholder="제목을 입력해주세요."
+        type="text"
+        value="게시글 제목"
+      />
+      <input
+        class="css-1u3mfel"
+        placeholder="내용을 입력해주세요."
+        type="text"
+        value="게시글 내용"
+      />
+    </div>
+  </div>
+</div>
+`;

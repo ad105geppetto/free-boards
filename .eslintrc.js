@@ -16,6 +16,7 @@ module.exports = {
       version: "17.0",
     },
   },
+  ignorePatterns: ["node_modules/", "out/", ".next/"],
   rules: {
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-function-return-type": "off",

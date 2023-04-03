@@ -2,20 +2,30 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=250&section=header&text=📦Free-Boards📦&fontSize=45" />
   </br>
   <h3>📚 STACKS</h3>
-  <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=Axios&logoColor=white">
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=white">
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=NestJS&logoColor=white">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white">
+  <img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=Jest&logoColor=white">
   <img src="https://img.shields.io/badge/Emotion-C43BAD?style=for-the-badge&logo=">
 </div>
 
 ## 목차
 
-1. [서비스 개요](#서비스-개요)
-2. [요구사항 분석 및 구현](#요구사항-분석-및-구현)
-3. [구현](#구현)
-4. [Test](#test)
+1. [Intro](#intro)
+2. [서비스 개요](#서비스-개요)
+3. [요구사항 분석 및 구현](#요구사항-분석-및-구현)
+4. [구현](#구현)
+5. [Test](#test)
    - Unit Test
-5. [Commit Convention](#commit-convention)
+6. [Commit Convention](#commit-convention)
+
+## Intro
+
+- break point는 아래와 같습니다.
+  - 폰 ~767px
+  - 태블릿 768px~1156px
+  - 모니터 1157px~
+- UI가 비슷한 페이지는 코드 재사용성을 높이고자 했습니다.
 
 ## 서비스 개요
 
@@ -33,7 +43,7 @@
   - 회원 가입, 로그인 없이 비밀번호만 일치하면 수정, 삭제가 가능합니다.
   - 비밀번호는 비밀번호는 6~12자 이며, 공백이 불가합니다.
 - 모든 사용자는 한 페이지 내에서 모든 게시글을 최신 글 순서로 확인할 수 있습니다.
-- Landing Page를 제공합니다.
+- 스크롤 이벤트를 기반으로 상호작용하는 Landing Page를 제공합니다.
 
 ## 구현
 

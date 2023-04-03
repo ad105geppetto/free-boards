@@ -10,7 +10,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "jest/globals"],
+  plugins: ["react", "jest"],
   settings: {
     react: {
       version: "17.0",

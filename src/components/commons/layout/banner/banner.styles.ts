@@ -13,5 +13,7 @@ export const Wapper = styled.div`
 `;
 
 export const BannerImage = styled.img`
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 `;

@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState, useRef } from "react";
+import { useState, memo } from "react";
 import * as S from "./navigation.styles";
 
 const menus = [
@@ -7,10 +7,9 @@ const menus = [
   { title: "자유게시판", path: "/free-boards" },
 ];
 
-export default function Navigation() {
+function Navigation() {
   const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
-  const menuRef = useRef(null);
 
   const onClickMove = (path: string) => () => {
     onClickHamburger();
@@ -28,7 +27,7 @@ export default function Navigation() {
           <S.Bar></S.Bar>
           <S.Bar></S.Bar>
         </S.HamburgerButton>
-        <S.MenuWrapper isVisible={isVisible} ref={menuRef}>
+        <S.MenuWrapper isVisible={isVisible}>
           {menus.map((menu, index) => (
             <S.Menu key={index} onClick={onClickMove(menu.path)}>
               {menu.title}
@@ -39,3 +38,5 @@ export default function Navigation() {
     </S.Container>
   );
 }
+
+export default memo(Navigation);

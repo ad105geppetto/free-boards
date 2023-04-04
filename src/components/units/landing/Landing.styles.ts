@@ -20,6 +20,7 @@ export const ImageWrapper = styled.div`
 
 export const TransactionImage = styled.img`
   width: 320px;
+  height: 320px;
 `;
 
 export const TextWrapper = styled.div`

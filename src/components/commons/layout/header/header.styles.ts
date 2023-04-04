@@ -16,6 +16,12 @@ export const Wapper = styled.div`
 `;
 
 export const Image = styled.img`
-  padding-left: 10px;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
   cursor: pointer;
+
+  @media screen and (max-width: 1156px) {
+    margin-left: 20px;
+  }
 `;

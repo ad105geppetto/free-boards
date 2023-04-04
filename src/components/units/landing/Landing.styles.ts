@@ -97,6 +97,8 @@ export const ListItem = styled.li`
 
   &#on::before {
     background-image: ${(props: IListItemProps) => `url(${props.itemUrl})`};
+    width: 51px;
+    height: 53px;
   }
 `;
 

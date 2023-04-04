@@ -26,6 +26,7 @@ export default function LandingUI(props: ILandingUIProps) {
           <S.DownArrow
             src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/down-arrow-icon.webp?alt=media"
             alt="down-arrow"
+            loading="lazy"
           />
         </S.DownArrowWrapper>
         <S.ListWrapper ref={props.listRef}>
@@ -43,6 +44,7 @@ export default function LandingUI(props: ILandingUIProps) {
               id={image.id}
               src={image.src}
               alt={image.alt}
+              loading="lazy"
             />
           ))}
         </S.ImageIconWrapper>

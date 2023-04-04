@@ -1,11 +1,8 @@
 import * as S from "./BoardList.styles";
-import { Board, IBoardListUIProps, TRoutes } from "./BoardList.types";
+import { Board, IBoardListUIProps } from "./BoardList.types";
 import Modal02 from "../../../commons/modals/modal02";
 import HeadMeta from "../../../commons/meta";
-
-const routes: TRoutes = {
-  "/free-boards/": "자유게시판",
-};
+import Loading from "../../../commons/loading";
 
 export default function BoardListUI(props: IBoardListUIProps) {
   return (
@@ -18,24 +15,31 @@ export default function BoardListUI(props: IBoardListUIProps) {
         <Modal02 errorMessage={props.errorMessage} onClose={props.onClose} />
       )}
       <S.Wapper>
-        <S.BoardTitle>{routes[props.pathname]}</S.BoardTitle>
+        <S.BoardTitle>자유게시판</S.BoardTitle>
         <S.BoardTable>
           <S.BoardHeader>
             <S.Number>번호</S.Number>
             <S.Title>제목</S.Title>
             <S.Writer>작성자</S.Writer>
           </S.BoardHeader>
-          {props.boards.map((board: Board, index: number) => (
-            <S.Board
-              key={board.id}
-              onClick={props.onClickMoveToPage(`${props.pathname}${board.id}`)}
-            >
-              <S.Number>{props.currentTopNumber - index}</S.Number>
-              <S.Title>{board.title}</S.Title>
-              <S.Writer>{board.writer}</S.Writer>
-            </S.Board>
-          ))}
+          {props.boards.length !== 0 ? (
+            props.boards.map((board: Board, index: number) => (
+              <S.Board
+                key={board.id}
+                onClick={props.onClickMoveToPage(
+                  `${props.pathname}${board.id}`
+                )}
+              >
+                <S.Number>{props.currentTopNumber - index}</S.Number>
+                <S.Title>{board.title}</S.Title>
+                <S.Writer>{board.writer}</S.Writer>
+              </S.Board>
+            ))
+          ) : (
+            <Loading />
+          )}
         </S.BoardTable>
+
         <S.ButtonWrapper>
           <S.WriteButton
             onClick={props.onClickMoveToPage(`${props.pathname}new`)}

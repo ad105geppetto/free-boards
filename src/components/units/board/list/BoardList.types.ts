@@ -13,8 +13,6 @@ export interface IBoardListUIProps {
   onClickPrevButton: () => void;
 }
 
-export type TRoutes = Record<string, string>;
-
 export interface Board extends DocumentData {
   id: string;
 }

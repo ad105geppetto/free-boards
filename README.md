@@ -57,15 +57,15 @@
 
 #### 자유게시판 등록
 
-<img src="https://user-images.githubusercontent.com/92367032/229455578-b4eb9ed7-e62f-465e-aab6-34b11fe93281.gif"/>
+<img src="https://user-images.githubusercontent.com/92367032/229938027-00fa465d-bb3b-4254-bb7b-bee9ee19b5cc.gif"/>
 
 #### 자유게시판 수정
 
-<img src="https://user-images.githubusercontent.com/92367032/229455646-1b47f323-49ba-4212-85e1-f8830d82b04b.gif"/>
+<img src="https://user-images.githubusercontent.com/92367032/229938024-221baebc-589c-48c5-a5c5-fc27fef93284.gif"/>
 
 #### 자유게시판 삭제
 
-<img src="https://user-images.githubusercontent.com/92367032/229455673-e071b751-f59f-4c8c-9587-2db27a0d2b36.gif"/>
+<img src="https://user-images.githubusercontent.com/92367032/229938018-e51662b3-71de-4d3a-86f9-4c93b640e381.gif"/>
 
 ## Test
 

@@ -31,7 +31,7 @@ export const TitleWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 50px;
-  background-color: #800080;
+  background-color: #ffa500;
 `;
 
 export const ModalTitle = styled.h2`
@@ -75,7 +75,7 @@ export const Submit = styled.button`
   cursor: pointer;
 
   :hover {
-    background-color: #800080;
+    background-color: #ffa500;
     color: white;
     transition: all 0.3s ease-in-out;
   }

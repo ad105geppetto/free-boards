@@ -20,10 +20,6 @@
 6. [웹 접근성 및 SEO 개선](#웹-접근성-및-SEO-개선)
 7. [Commit Convention](#commit-convention)
 
-### 배포 링크
-
-http://www.anonboard.kro.kr
-
 ## Intro
 
 - break point는 아래와 같습니다.
@@ -31,6 +27,7 @@ http://www.anonboard.kro.kr
   - 태블릿 768px~1156px
   - 모니터 1157px~
 - UI가 비슷한 페이지는 코드 재사용성을 높이고자 했습니다.
+- 배포 Link: [http://www.anonboard.kro.kr](http://www.anonboard.kro.kr)
 
 ## 서비스 개요
 

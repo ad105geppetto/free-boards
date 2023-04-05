@@ -29,19 +29,9 @@ export const itemsArr = [...items, ...items, ...items];
 
 export const images = [
   {
-    id: "image_1",
-    src: "https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/author.webp?alt=media",
-    alt: "author",
-  },
-  {
-    id: "image_2",
-    src: "https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/friendship.webp?alt=media",
-    alt: "freindship",
-  },
-  {
-    id: "image_3",
-    src: "https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/librarian.webp?alt=media",
-    alt: "librarian",
+    id: "image_6",
+    src: "https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/social.webp?alt=media",
+    alt: "social",
   },
   {
     id: "image_4",
@@ -49,18 +39,23 @@ export const images = [
     alt: "reporter-m",
   },
   {
+    id: "image_2",
+    src: "https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/friendship.webp?alt=media",
+    alt: "freindship",
+  },
+  {
     id: "image_5",
     src: "https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/reporter_w.webp?alt=media",
     alt: "reporter-w",
   },
   {
-    id: "image_6",
-    src: "https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/social.webp?alt=media",
-    alt: "social",
-  },
-  {
     id: "image_1",
     src: "https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/author.webp?alt=media",
     alt: "author",
+  },
+  {
+    id: "image_3",
+    src: "https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/librarian.webp?alt=media",
+    alt: "librarian",
   },
 ];

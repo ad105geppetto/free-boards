@@ -12,8 +12,8 @@ export default function Landing() {
     const listStyleChangeStartY = 633;
     const listStyleChangeEndY = 1923;
 
-    const imageListStyleChangeStartY = 2020;
-    const imageListStyleChangeEndY = 2500;
+    const imageListStyleChangeStartY = 1700;
+    const imageListStyleChangeEndY = 2200;
 
     if (!list) return;
     if (!imageList) return;

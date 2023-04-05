@@ -27,6 +27,7 @@
   - 태블릿 768px~1156px
   - 모니터 1157px~
 - UI가 비슷한 페이지는 코드 재사용성을 높이고자 했습니다.
+- 배포 Link: [http://www.anonboard.kro.kr](http://www.anonboard.kro.kr)
 
 ## 서비스 개요
 

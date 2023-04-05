@@ -71,6 +71,10 @@
 
 <img src="https://user-images.githubusercontent.com/92367032/229501012-a1fc45b1-5abb-418f-a87b-a976120a092f.png" width=450 height=250px/>
 
+## 웹 접근성 및 SEO 개선
+
+<img src="https://user-images.githubusercontent.com/92367032/229948220-541384c2-11c4-4817-9672-6d8ad0873f38.png" />
+
 ## Commit Convention
 
 - init : 초기화

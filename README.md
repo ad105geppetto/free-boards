@@ -17,7 +17,8 @@
 4. [구현](#구현)
 5. [Test](#test)
    - Unit Test
-6. [Commit Convention](#commit-convention)
+6. [웹 접근성 및 SEO 개선](#웹-접근성-및-SEO-개선)
+7. [Commit Convention](#commit-convention)
 
 ## Intro
 

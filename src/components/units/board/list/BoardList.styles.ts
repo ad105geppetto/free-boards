@@ -45,10 +45,12 @@ export const BoardHeader = styled.div`
   border-top: 1px solid black;
 `;
 
-export const Board = styled.div`
+export const Board = styled.a`
   display: flex;
   flex-direction: row;
   width: 100%;
+  text-decoration: none;
+  color: black;
   cursor: pointer;
 `;
 
@@ -124,14 +126,20 @@ export const ButtonWrapper = styled.div`
   margin-top: 10px;
 `;
 
-export const WriteButton = styled.button`
+export const WriteButton = styled.a`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 120px;
   height: 36px;
   font-weight: 600;
-  border: none;
+  border: 1px solid #dddddd;
   border-radius: 2px;
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
+  background-color: white;
+  color: black;
+  text-decoration: none;
 
   :hover {
     background-color: black;
@@ -155,8 +163,9 @@ export const PrevButton = styled.button`
   height: 40px;
   padding: 0 5px;
   font-weight: 600;
-  border: none;
+  border: 1px solid #dddddd;
   border-radius: 2px;
+  background-color: white;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 
@@ -174,8 +183,9 @@ export const NextButton = styled.button`
   height: 40px;
   padding: 0 5px;
   font-weight: 600;
-  border: none;
+  border: 1px solid #dddddd;
   border-radius: 2px;
+  background-color: white;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 

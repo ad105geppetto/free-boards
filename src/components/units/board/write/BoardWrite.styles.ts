@@ -38,14 +38,19 @@ export const BoardWriteTitle = styled.h1`
   }
 `;
 
-export const SubmitButton = styled.button`
+export const SubmitButton = styled.a`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 100px;
   height: 36px;
-  border: none;
+  border: 1px solid #dddddd;
   border-radius: 2px;
+  color: black;
   font-weight: 600;
+  text-decoration: none;
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
 
   :hover {
     background-color: black;

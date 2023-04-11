@@ -9,6 +9,7 @@ export interface IBoardWriteUIProps {
   writer: string;
   title: string;
   contents: string;
+  boardId: string;
   isOpen: boolean;
   errorMessage: string;
   placeHolderWriter: string;

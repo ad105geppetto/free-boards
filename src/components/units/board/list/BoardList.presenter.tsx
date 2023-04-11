@@ -3,6 +3,7 @@ import { Board, IBoardListUIProps } from "./BoardList.types";
 import Modal02 from "../../../commons/modals/modal02";
 import HeadMeta from "../../../commons/meta";
 import Loading from "../../../commons/loading";
+import Link from "next/link";
 
 export default function BoardListUI(props: IBoardListUIProps) {
   return (
@@ -24,16 +25,17 @@ export default function BoardListUI(props: IBoardListUIProps) {
           </S.BoardHeader>
           {props.boards.length !== 0 ? (
             props.boards.map((board: Board, index: number) => (
-              <S.Board
+              <Link
+                href={`${props.pathname}${board.id}`}
                 key={board.id}
-                onClick={props.onClickMoveToPage(
-                  `${props.pathname}${board.id}`
-                )}
+                passHref
               >
-                <S.Number>{props.currentTopNumber - index}</S.Number>
-                <S.Title>{board.title}</S.Title>
-                <S.Writer>{board.writer}</S.Writer>
-              </S.Board>
+                <S.Board>
+                  <S.Number>{props.currentTopNumber - index}</S.Number>
+                  <S.Title>{board.title}</S.Title>
+                  <S.Writer>{board.writer}</S.Writer>
+                </S.Board>
+              </Link>
             ))
           ) : (
             <Loading />
@@ -41,11 +43,9 @@ export default function BoardListUI(props: IBoardListUIProps) {
         </S.BoardTable>
 
         <S.ButtonWrapper>
-          <S.WriteButton
-            onClick={props.onClickMoveToPage(`${props.pathname}new`)}
-          >
-            게시글 작성
-          </S.WriteButton>
+          <Link href={`${props.pathname}new`} passHref>
+            <S.WriteButton>게시글 작성</S.WriteButton>
+          </Link>
         </S.ButtonWrapper>
         <S.PagenationGroup>
           <S.PrevButton onClick={props.onClickPrevButton}>

@@ -15,11 +15,17 @@ export const Wapper = styled.div`
   margin: 10px 0;
 `;
 
+export const ImageWrapper = styled.a`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Image = styled.img`
   width: 50px;
   height: 50px;
   margin-left: 10px;
-  cursor: pointer;
 
   @media screen and (max-width: 1156px) {
     margin-left: 20px;

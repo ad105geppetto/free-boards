@@ -4,6 +4,7 @@ import Modal01 from "../../../commons/modals/modal01";
 import Modal02 from "../../../commons/modals/modal02";
 import Modal03 from "../../../commons/modals/modal03";
 import HeadMeta from "../../../commons/meta";
+import Link from "next/link";
 
 export default function BoardDetailUI(props: IBoardDetailUIProps) {
   return (
@@ -26,11 +27,9 @@ export default function BoardDetailUI(props: IBoardDetailUIProps) {
       )}
       <S.Wapper>
         <S.ArticleTop>
-          <S.BoardListButton
-            onClick={props.onClickMoveToPage(`/${props.type}`)}
-          >
-            목록
-          </S.BoardListButton>
+          <Link href={`/${props.type}`} passHref>
+            <S.BoardListButton>목록</S.BoardListButton>
+          </Link>
         </S.ArticleTop>
         <S.ArticleContentsBox>
           <S.ArticleHeader>

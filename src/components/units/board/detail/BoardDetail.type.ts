@@ -9,7 +9,6 @@ export interface Board {
 export interface IBoardDetailUIProps {
   type: string;
   board: Board | null;
-  boardId: string;
   isOpen: boolean;
   errorMessage: string;
   isDeleteModalOpen: boolean;

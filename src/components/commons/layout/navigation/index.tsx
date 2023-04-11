@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import Link from "next/link";
 import { useState, memo } from "react";
 import * as S from "./navigation.styles";
 
@@ -8,13 +8,7 @@ const menus = [
 ];
 
 function Navigation() {
-  const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
-
-  const onClickMove = (path: string) => () => {
-    onClickHamburger();
-    void router.push(path);
-  };
 
   const onClickHamburger = () => {
     setIsVisible((prev) => !prev);
@@ -29,9 +23,9 @@ function Navigation() {
         </S.HamburgerButton>
         <S.MenuWrapper isVisible={isVisible}>
           {menus.map((menu, index) => (
-            <S.Menu key={index} onClick={onClickMove(menu.path)}>
-              {menu.title}
-            </S.Menu>
+            <Link key={index} href={`${menu.path}`} passHref>
+              <S.Menu onClick={onClickHamburger}>{menu.title}</S.Menu>
+            </Link>
           ))}
         </S.MenuWrapper>
       </S.Wapper>

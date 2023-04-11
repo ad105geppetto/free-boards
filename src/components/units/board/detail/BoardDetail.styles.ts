@@ -28,14 +28,19 @@ export const ArticleTop = styled.div`
   margin: 12px 0;
 `;
 
-export const BoardListButton = styled.button`
+export const BoardListButton = styled.a`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: 36px;
   padding: 0 12px;
   font-weight: 700;
-  border: none;
+  border: 1px solid #dddddd;
   border-radius: 2px;
+  color: black;
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
+  text-decoration: none;
 
   :hover {
     background-color: black;
@@ -85,8 +90,9 @@ export const DeleteButton = styled.button`
   width: 150px;
   height: 36px;
   font-weight: 600;
-  border: none;
+  border: 1px solid #dddddd;
   border-radius: 2px;
+  background-color: white;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 
@@ -105,8 +111,9 @@ export const EditButton = styled.button`
   width: 150px;
   height: 36px;
   font-weight: 600;
-  border: none;
+  border: 1px solid #dddddd;
   border-radius: 2px;
+  background-color: white;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 

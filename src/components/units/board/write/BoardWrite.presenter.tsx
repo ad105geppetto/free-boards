@@ -2,6 +2,7 @@ import * as S from "./BoardWrite.styles";
 import { IBoardWriteUIProps } from "./BoardWrite.types";
 import Modal02 from "../../../commons/modals/modal02";
 import HeadMeta from "../../../commons/meta";
+import Link from "next/link";
 
 export default function BoardWriteUI(props: IBoardWriteUIProps) {
   return (
@@ -26,11 +27,18 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
           <S.BoardWriteTitle>
             게시글 {props.isEdit ? "수정" : "등록"}
           </S.BoardWriteTitle>
-          <S.SubmitButton
-            onClick={props.isEdit ? props.onClickUpdate : props.onClickSubmit}
+          <Link
+            href={`/free-boards/${
+              props.isEdit ? `${props.boardId}/edit` : "new"
+            }`}
+            passHref
           >
-            {props.isEdit ? "수정하기" : "등록하기"}
-          </S.SubmitButton>
+            <S.SubmitButton
+              onClick={props.isEdit ? props.onClickUpdate : props.onClickSubmit}
+            >
+              {props.isEdit ? "수정하기" : "등록하기"}
+            </S.SubmitButton>
+          </Link>
         </S.WritingHeader>
         {props.isEdit ? (
           ""

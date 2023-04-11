@@ -64,11 +64,12 @@ export const MenuWrapper = styled.div`
   }
 `;
 
-export const Menu = styled.span`
+export const Menu = styled.a`
   font-size: 20px;
   font-weight: 600;
   padding: 0 10px;
-  cursor: pointer;
+  color: black;
+  text-decoration: none;
 
   &:after {
     display: block;

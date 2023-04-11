@@ -41,29 +41,22 @@ export default function BoardWrite(props: IBoardWriteProps) {
     }
 
     if (!props.isEdit) return;
-    let cancelled = false;
 
     async function fetchBoard() {
       const docRef = doc(getFirestore(firebaseApp), type, boardId);
       const docSnap = await getDoc(docRef);
 
-      if (!cancelled) {
-        if (docSnap.exists()) {
-          const { writer, title, contents } = docSnap.data();
-          setWriter(writer);
-          setTitle(title);
-          setContents(contents);
-        } else {
-          setErrorMessage("잘못된 요청입니다.");
-          onClose();
-        }
+      if (docSnap.exists()) {
+        const { writer, title, contents } = docSnap.data();
+        setWriter(writer);
+        setTitle(title);
+        setContents(contents);
+      } else {
+        onClickMoveToPage("/")();
       }
     }
-    void fetchBoard();
 
-    return () => {
-      cancelled = true;
-    };
+    void fetchBoard();
   }, []);
 
   const onChangeWriter = (event: ChangeEvent<HTMLInputElement>) => {
@@ -162,7 +155,7 @@ export default function BoardWrite(props: IBoardWriteProps) {
   const onClickUpdate = async () => {
     const [collectionId, fieldId] = currentPath.split("/").slice(1);
     const board = doc(getFirestore(firebaseApp), collectionId, fieldId);
-
+    console.log(writer, title, contents);
     try {
       await updateDoc(board, {
         writer,
@@ -185,6 +178,7 @@ export default function BoardWrite(props: IBoardWriteProps) {
       writer={writer}
       title={title}
       contents={contents}
+      boardId={boardId}
       isOpen={isOpen}
       errorMessage={errorMessage}
       placeHolderWriter={placeHolderWriter}

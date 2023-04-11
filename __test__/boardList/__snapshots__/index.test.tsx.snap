@@ -35,8 +35,9 @@ exports[`자유게시판 목록 페이지 Unit Test 게시판 목록 페이지 �
             작성자
           </div>
         </div>
-        <div
-          class="css-1oplo6e"
+        <a
+          class="css-vuwrb"
+          href="/free-boards/ih2dfdf2"
         >
           <div
             class="css-1kfaxq7"
@@ -53,9 +54,10 @@ exports[`자유게시판 목록 페이지 Unit Test 게시판 목록 페이지 �
           >
             한글이름입니다앙
           </div>
-        </div>
-        <div
-          class="css-1oplo6e"
+        </a>
+        <a
+          class="css-vuwrb"
+          href="/free-boards/nrfdhd89"
         >
           <div
             class="css-1kfaxq7"
@@ -72,9 +74,10 @@ exports[`자유게시판 목록 페이지 Unit Test 게시판 목록 페이지 �
           >
             한글이름입니다앙
           </div>
-        </div>
-        <div
-          class="css-1oplo6e"
+        </a>
+        <a
+          class="css-vuwrb"
+          href="/free-boards/hkjjhkec4t"
         >
           <div
             class="css-1kfaxq7"
@@ -91,9 +94,10 @@ exports[`자유게시판 목록 페이지 Unit Test 게시판 목록 페이지 �
           >
             한글이름입니다앙
           </div>
-        </div>
-        <div
-          class="css-1oplo6e"
+        </a>
+        <a
+          class="css-vuwrb"
+          href="/free-boards/sdfdsfsjhhj"
         >
           <div
             class="css-1kfaxq7"
@@ -110,9 +114,10 @@ exports[`자유게시판 목록 페이지 Unit Test 게시판 목록 페이지 �
           >
             한글이름입니다앙
           </div>
-        </div>
-        <div
-          class="css-1oplo6e"
+        </a>
+        <a
+          class="css-vuwrb"
+          href="/free-boards/ikfnsidfods"
         >
           <div
             class="css-1kfaxq7"
@@ -129,27 +134,28 @@ exports[`자유게시판 목록 페이지 Unit Test 게시판 목록 페이지 �
           >
             한글이름입니다앙
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="css-yyp757"
       >
-        <button
-          class="css-1bwl7hh"
+        <a
+          class="css-14p1hea"
+          href="/free-boards/new"
         >
           게시글 작성
-        </button>
+        </a>
       </div>
       <div
         class="css-1yqh4in"
       >
         <button
-          class="css-1i0staf"
+          class="css-g6di9l"
         >
           이전 페이지
         </button>
         <button
-          class="css-1i0staf"
+          class="css-g6di9l"
         >
           다음 페이지
         </button>

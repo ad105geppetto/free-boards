@@ -13,7 +13,7 @@ exports[`랜딩 페이지 Unit Test 랜딩 페이지 스냅샷 테스트 1`] = `
       >
         <img
           alt="transaction"
-          class="css-dg7it9"
+          class="css-j9letj"
           src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/trading-icon.webp?alt=media"
         />
       </div>
@@ -42,6 +42,7 @@ exports[`랜딩 페이지 Unit Test 랜딩 페이지 스냅샷 테스트 1`] = `
         <img
           alt="down-arrow"
           class="css-1uh7s7m"
+          loading="lazy"
           src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/down-arrow-icon.webp?alt=media"
         />
       </div>
@@ -49,92 +50,92 @@ exports[`랜딩 페이지 Unit Test 랜딩 페이지 스냅샷 테스트 1`] = `
         class="css-pgji8g"
       >
         <li
-          class="list-item css-a71zpr"
+          class="list-item css-1lwl0fi"
         >
           자유게시판
         </li>
         <li
-          class="list-item css-1c4qo8s"
+          class="list-item css-d3d53p"
         >
           글쓰기
         </li>
         <li
-          class="list-item css-18ldrg7"
+          class="list-item css-ayrrkf"
         >
           좋은 글귀 추천
         </li>
         <li
-          class="list-item css-1c4qo8s"
+          class="list-item css-d3d53p"
         >
           출석체크?
         </li>
         <li
-          class="list-item css-a71zpr"
+          class="list-item css-1lwl0fi"
         >
           글을 수정하려면?
         </li>
         <li
-          class="list-item css-18ldrg7"
+          class="list-item css-ayrrkf"
         >
           좋은 게시판이였다!
         </li>
         <li
-          class="list-item css-a71zpr"
+          class="list-item css-1lwl0fi"
         >
           자유게시판
         </li>
         <li
-          class="list-item css-1c4qo8s"
+          class="list-item css-d3d53p"
         >
           글쓰기
         </li>
         <li
-          class="list-item css-18ldrg7"
+          class="list-item css-ayrrkf"
         >
           좋은 글귀 추천
         </li>
         <li
-          class="list-item css-1c4qo8s"
+          class="list-item css-d3d53p"
         >
           출석체크?
         </li>
         <li
-          class="list-item css-a71zpr"
+          class="list-item css-1lwl0fi"
         >
           글을 수정하려면?
         </li>
         <li
-          class="list-item css-18ldrg7"
+          class="list-item css-ayrrkf"
         >
           좋은 게시판이였다!
         </li>
         <li
-          class="list-item css-a71zpr"
+          class="list-item css-1lwl0fi"
         >
           자유게시판
         </li>
         <li
-          class="list-item css-1c4qo8s"
+          class="list-item css-d3d53p"
         >
           글쓰기
         </li>
         <li
-          class="list-item css-18ldrg7"
+          class="list-item css-ayrrkf"
         >
           좋은 글귀 추천
         </li>
         <li
-          class="list-item css-1c4qo8s"
+          class="list-item css-d3d53p"
         >
           출석체크?
         </li>
         <li
-          class="list-item css-a71zpr"
+          class="list-item css-1lwl0fi"
         >
           글을 수정하려면?
         </li>
         <li
-          class="list-item css-18ldrg7"
+          class="list-item css-ayrrkf"
         >
           좋은 게시판이였다!
         </li>
@@ -143,46 +144,46 @@ exports[`랜딩 페이지 Unit Test 랜딩 페이지 스냅샷 테스트 1`] = `
         class="css-gpqih7"
       >
         <img
-          alt="author"
+          alt="social"
           class="image-icon css-4i3i7k"
-          id="image_1"
-          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/author.webp?alt=media"
-        />
-        <img
-          alt="freindship"
-          class="image-icon css-4i3i7k"
-          id="image_2"
-          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/friendship.webp?alt=media"
-        />
-        <img
-          alt="librarian"
-          class="image-icon css-4i3i7k"
-          id="image_3"
-          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/librarian.webp?alt=media"
+          id="image_6"
+          loading="lazy"
+          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/social.webp?alt=media"
         />
         <img
           alt="reporter-m"
           class="image-icon css-4i3i7k"
           id="image_4"
+          loading="lazy"
           src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/reporter_m.webp?alt=media"
+        />
+        <img
+          alt="freindship"
+          class="image-icon css-4i3i7k"
+          id="image_2"
+          loading="lazy"
+          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/friendship.webp?alt=media"
         />
         <img
           alt="reporter-w"
           class="image-icon css-4i3i7k"
           id="image_5"
+          loading="lazy"
           src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/reporter_w.webp?alt=media"
-        />
-        <img
-          alt="social"
-          class="image-icon css-4i3i7k"
-          id="image_6"
-          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/social.webp?alt=media"
         />
         <img
           alt="author"
           class="image-icon css-4i3i7k"
           id="image_1"
+          loading="lazy"
           src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/author.webp?alt=media"
+        />
+        <img
+          alt="librarian"
+          class="image-icon css-4i3i7k"
+          id="image_3"
+          loading="lazy"
+          src="https://firebasestorage.googleapis.com/v0/b/used-item-boards.appspot.com/o/librarian.webp?alt=media"
         />
       </div>
     </div>

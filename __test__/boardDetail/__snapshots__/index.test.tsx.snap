@@ -11,11 +11,12 @@ exports[`자유게시판 상세 페이지 Unit Test 게시판 상세 페이지 �
       <div
         class="css-1c0ijag"
       >
-        <button
-          class="css-1yx0ghv"
+        <a
+          class="css-qbet3h"
+          href="/free-boards"
         >
           목록
-        </button>
+        </a>
       </div>
       <div
         class="css-1adekgn"
@@ -49,12 +50,12 @@ exports[`자유게시판 상세 페이지 Unit Test 게시판 상세 페이지 �
         class="css-e2whbd"
       >
         <button
-          class="css-1df5twa"
+          class="css-sj9vjd"
         >
           게시글 삭제하기
         </button>
         <button
-          class="css-1df5twa"
+          class="css-sj9vjd"
         >
           게시글 수정하기
         </button>

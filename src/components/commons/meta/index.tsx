@@ -3,12 +3,13 @@ import Head from "next/head";
 interface IHeadMetaProps {
   title: string;
   description: string;
+  ogDescription: string;
 }
 
-const HeadMeta = ({ title, description }: IHeadMetaProps) => {
+const HeadMeta = ({ title, description, ogDescription }: IHeadMetaProps) => {
   return (
     <Head>
-      <title>{title || "자유게시판"}</title>
+      <title>{title || "익명 게시판"}</title>
       <meta
         name="description"
         content={
@@ -17,9 +18,16 @@ const HeadMeta = ({ title, description }: IHeadMetaProps) => {
         }
       />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <meta property="og:title" content={title || "자유게시판"} />
+      <meta property="og:title" content={title || "익명 게시판"} />
+      <meta
+        property="og:description"
+        content={
+          ogDescription ||
+          "익명 게시판은 회원가입 없이도 자유롭게 글을 작성하고 소통할 수 있는 온라인 커뮤니티입니다."
+        }
+      />
       <meta property="og:type" content="website" />
-      <meta property="og:article:author" content="자유게시판" />
+      <meta property="og:article:author" content="익명 게시판" />
     </Head>
   );
 };

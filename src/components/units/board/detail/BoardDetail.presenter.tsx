@@ -10,8 +10,9 @@ export default function BoardDetailUI(props: IBoardDetailUIProps) {
   return (
     <S.Container>
       <HeadMeta
-        title="자유게시판 | 자유로운 대화와 공유, 상세페이지"
-        description="자유게시판은 회원들이 자유롭게 글을 올리고 소통할 수 있는 공간입니다. 다양한 주제의 글들이 올라와 있어서 언제나 새로운 정보와 이야기를 만날 수 있습니다. 게시판의 규칙을 잘 지키면 누구나 쉽게 참여할 수 있으며, 모두가 함께 존중하고 즐길 수 있는 공간이 되기를 바랍니다."
+        title={`${props.board?.title ?? "상세페이지"} - UNION`}
+        description="자유게시판은 자유롭게 글을 올리고 소통할 수 있는 공간입니다. 다양한 주제의 글들이 올라와 있어서 언제나 새로운 정보와 이야기를 만날 수 있습니다."
+        ogDescription="자유게시판은 자유롭게 글을 올리고 소통할 수 있는 공간입니다. 다양한 주제의 글들이 올라와 있어서 언제나 새로운 정보와 이야기를 만날 수 있습니다."
       />
       {props.isDeleteModalOpen && (
         <Modal01

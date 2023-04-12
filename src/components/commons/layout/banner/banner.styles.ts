@@ -5,15 +5,19 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   height: 140px;
+
+  @media screen and (max-width: 767px) {
+    height: 70px;
+  }
 `;
 
-export const Wapper = styled.div`
+export const Wapper = styled.picture`
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 `;
 
 export const BannerImage = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
 `;

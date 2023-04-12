@@ -8,7 +8,7 @@ interface ILayoutProps {
   children: JSX.Element;
 }
 
-const Body = styled.div`
+const Body = styled.main`
   min-height: calc(100vh - 260px);
 `;
 

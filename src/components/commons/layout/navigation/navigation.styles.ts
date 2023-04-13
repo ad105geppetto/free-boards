@@ -49,7 +49,7 @@ interface IProps {
   isVisible: boolean;
 }
 
-export const MenuWrapper = styled.div`
+export const MenuGroup = styled.div`
   display: flex;
   flex-direction: row;
 
@@ -64,10 +64,19 @@ export const MenuWrapper = styled.div`
   }
 `;
 
+export const MenuWrapper = styled.h2`
+  padding: 0 10px;
+
+  @media screen and (max-width: 1156px) {
+    padding: 15px 0;
+    color: white;
+    text-align: center;
+  }
+`;
+
 export const Menu = styled.a`
   font-size: 20px;
   font-weight: 600;
-  padding: 0 10px;
   color: black;
   text-decoration: none;
 
@@ -81,11 +90,5 @@ export const Menu = styled.a`
 
   &:hover:after {
     transform: scaleX(1);
-  }
-
-  @media screen and (max-width: 1156px) {
-    padding: 15px 0;
-    color: white;
-    text-align: center;
   }
 `;

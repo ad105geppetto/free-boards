@@ -34,7 +34,7 @@ export const TitleWrapper = styled.div`
   background-color: #ffa500;
 `;
 
-export const ModalTitle = styled.h2`
+export const ModalTitle = styled.h3`
   font-size: 24px;
   color: white;
 `;

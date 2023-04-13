@@ -30,7 +30,7 @@ export const WritingHeader = styled.div`
   margin-bottom: 10px;
 `;
 
-export const BoardWriteTitle = styled.h1`
+export const BoardWriteTitle = styled.h3`
   font-size: 32px;
 
   @media screen and (max-width: 1156px) {

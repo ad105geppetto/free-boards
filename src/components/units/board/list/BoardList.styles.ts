@@ -6,7 +6,7 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const Wapper = styled.div`
+export const Wapper = styled.section`
   display: flex;
   flex-direction: column;
   width: 1156px;
@@ -21,7 +21,7 @@ export const Wapper = styled.div`
   }
 `;
 
-export const BoardTitle = styled.h1`
+export const BoardTitle = styled.h3`
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 32px;

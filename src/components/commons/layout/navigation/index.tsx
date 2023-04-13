@@ -21,13 +21,15 @@ function Navigation() {
           <S.Bar></S.Bar>
           <S.Bar></S.Bar>
         </S.HamburgerButton>
-        <S.MenuWrapper isVisible={isVisible}>
+        <S.MenuGroup isVisible={isVisible}>
           {menus.map((menu, index) => (
-            <Link key={index} href={`${menu.path}`} passHref>
-              <S.Menu onClick={onClickHamburger}>{menu.title}</S.Menu>
-            </Link>
+            <S.MenuWrapper key={index}>
+              <Link key={index} href={`${menu.path}`} passHref>
+                <S.Menu onClick={onClickHamburger}>{menu.title}</S.Menu>
+              </Link>
+            </S.MenuWrapper>
           ))}
-        </S.MenuWrapper>
+        </S.MenuGroup>
       </S.Wapper>
     </S.Container>
   );

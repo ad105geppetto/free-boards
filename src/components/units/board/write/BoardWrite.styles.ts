@@ -6,7 +6,8 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const Wapper = styled.div`
+export const Wapper = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 1156px;
@@ -21,21 +22,22 @@ export const Wapper = styled.div`
   }
 `;
 
-export const WritingHeader = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
-`;
-
 export const BoardWriteTitle = styled.h3`
   font-size: 32px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 
   @media screen and (max-width: 1156px) {
     font-size: 24px;
   }
+`;
+
+export const SubmitWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
 `;
 
 export const SubmitButton = styled.a`
@@ -70,14 +72,12 @@ export const Writer = styled.input`
   width: 100%;
   height: 40px;
   padding: 10px 12px;
-  outline: none;
 `;
 
 export const Password = styled.input`
   width: 100%;
   height: 40px;
   padding: 10px 12px;
-  outline: none;
 `;
 
 export const Title = styled.input`
@@ -85,7 +85,6 @@ export const Title = styled.input`
   height: 40px;
   padding: 10px 12px;
   margin-top: 12px;
-  outline: none;
 `;
 
 export const Contents = styled.input`
@@ -93,5 +92,4 @@ export const Contents = styled.input`
   height: 400px;
   padding: 10px 12px;
   margin-top: 12px;
-  outline: none;
 `;

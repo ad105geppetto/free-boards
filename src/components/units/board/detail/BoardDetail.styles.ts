@@ -48,16 +48,10 @@ export const BoardListButton = styled.a`
   }
 `;
 
-export const ArticleContentsBox = styled.div`
+export const ArticleContentsBox = styled.section`
   padding: 29px 29px;
   border: 1px solid #ddd;
   border-radius: 6px;
-`;
-
-export const ArticleHeader = styled.div`
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
 `;
 
 export const Title = styled.h3`
@@ -72,6 +66,9 @@ export const Writer = styled.div`
 
 export const CreatedAt = styled.div`
   font-size: 12px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
 `;
 
 export const Contents = styled.div`

@@ -8,7 +8,7 @@ export function useModalErrorState() {
 
   const onClose = () => {
     if (isOpen) {
-      void router.replace("/");
+      void router.push(router.asPath);
     }
     setIsOpen((prev) => !prev);
   };

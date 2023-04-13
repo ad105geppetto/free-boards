@@ -16,7 +16,9 @@ export default function Modal02(props: IModal02Props) {
           <S.ModalContents>{props.errorMessage}</S.ModalContents>
         </S.ContentsWrapper>
         <S.SubmitWrapper>
-          <S.Submit onClick={props.onClose}>확인</S.Submit>
+          <S.Submit onClick={props.onClose} autoFocus>
+            확인
+          </S.Submit>
         </S.SubmitWrapper>
       </S.Modal>
     </S.ModalWrapper>

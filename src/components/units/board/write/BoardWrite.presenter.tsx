@@ -28,10 +28,44 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
         <Modal02 errorMessage={props.errorMessage} onClose={props.onClose} />
       )}
       <S.Wapper>
-        <S.WritingHeader>
-          <S.BoardWriteTitle>
-            게시글 {props.isEdit ? "수정" : "등록"}
-          </S.BoardWriteTitle>
+        <S.BoardWriteTitle>
+          게시글 {props.isEdit ? "수정" : "등록"}
+        </S.BoardWriteTitle>
+        {props.isEdit ? (
+          ""
+        ) : (
+          <S.UserInfoWrapper>
+            <S.Writer
+              onChange={props.onChangeWriter}
+              type="text"
+              placeholder={props.placeHolderWriter}
+              value={props.writer}
+              aria-label="작성자명"
+            />
+            <S.Password
+              onChange={props.onChangePassword}
+              type="password"
+              placeholder={props.placeHolderPassword}
+              autoComplete="off"
+              aria-label="비밀번호"
+            />
+          </S.UserInfoWrapper>
+        )}
+        <S.Title
+          onChange={props.onChangeTitle}
+          type="text"
+          placeholder={props.placeHolderTitle}
+          value={props.title}
+          aria-label="제목"
+        />
+        <S.Contents
+          onChange={props.onChangeContents}
+          type="text"
+          placeholder={props.placeHolderContents}
+          value={props.contents}
+          aria-label="내용"
+        />
+        <S.SubmitWrapper>
           <Link
             href={`/free-boards/${
               props.isEdit ? `${props.boardId}/edit` : "new"
@@ -44,37 +78,7 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
               {props.isEdit ? "수정하기" : "등록하기"}
             </S.SubmitButton>
           </Link>
-        </S.WritingHeader>
-        {props.isEdit ? (
-          ""
-        ) : (
-          <S.UserInfoWrapper>
-            <S.Writer
-              onChange={props.onChangeWriter}
-              type="text"
-              placeholder={props.placeHolderWriter}
-              value={props.writer}
-            />
-            <S.Password
-              onChange={props.onChangePassword}
-              type="password"
-              placeholder={props.placeHolderPassword}
-              autoComplete="off"
-            />
-          </S.UserInfoWrapper>
-        )}
-        <S.Title
-          onChange={props.onChangeTitle}
-          type="text"
-          placeholder={props.placeHolderTitle}
-          value={props.title}
-        />
-        <S.Contents
-          onChange={props.onChangeContents}
-          type="text"
-          placeholder={props.placeHolderContents}
-          value={props.contents}
-        />
+        </S.SubmitWrapper>
       </S.Wapper>
     </S.Container>
   );

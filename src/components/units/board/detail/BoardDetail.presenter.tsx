@@ -33,11 +33,9 @@ export default function BoardDetailUI(props: IBoardDetailUIProps) {
           </Link>
         </S.ArticleTop>
         <S.ArticleContentsBox>
-          <S.ArticleHeader>
-            <S.Title>{props.board?.title}</S.Title>
-            <S.Writer>{props.board?.writer}</S.Writer>
-            <S.CreatedAt>{props.board?.createdAt}</S.CreatedAt>
-          </S.ArticleHeader>
+          <S.Title>{props.board?.title}</S.Title>
+          <S.Writer>{props.board?.writer}</S.Writer>
+          <S.CreatedAt>{props.board?.createdAt}</S.CreatedAt>
           <S.Contents>{props.board?.contents}</S.Contents>
         </S.ArticleContentsBox>
         <S.ButtonWrapper>

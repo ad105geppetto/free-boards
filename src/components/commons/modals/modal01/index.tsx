@@ -51,7 +51,7 @@ export default function Modal01(props: IModal01Props) {
         </S.TitleWrapper>
         <S.ContentsWrapper>
           <S.ModalContents>비밀번호를 입력해주세요.</S.ModalContents>
-          <S.PasswordInput type="text" onChange={onChangePassword} />
+          <S.PasswordInput type="text" onChange={onChangePassword} autoFocus />
         </S.ContentsWrapper>
         <S.SubmitWrapper>
           <S.Submit onClick={onClickDelete}>확인</S.Submit>

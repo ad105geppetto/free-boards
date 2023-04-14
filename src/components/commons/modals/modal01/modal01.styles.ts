@@ -72,7 +72,13 @@ export const Submit = styled.button`
   background-color: white;
   font-weight: 700;
   transition: all 0.3s ease-in-out;
+  box-shadow: inset 0 0 0 3px white;
+  outline: none;
   cursor: pointer;
+
+  :focus-visible {
+    box-shadow: inset 0 0 0 3px red;
+  }
 
   &:nth-of-type(1) {
     border-right: 1px solid #ddd;
@@ -81,5 +87,6 @@ export const Submit = styled.button`
     background-color: #800080;
     color: white;
     transition: all 0.3s ease-in-out;
+    box-shadow: inset 0 0 0 3px #800080;
   }
 `;

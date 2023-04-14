@@ -11,23 +11,27 @@ export const Wapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 1156px;
-  margin: 10px 0;
+  padding-left: 10px;
+
+  @media screen and (max-width: 1156px) {
+    padding-left: 20px;
+  }
 `;
 
 export const ImageWrapper = styled.a`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  :focus-visible {
+    outline: 2px solid red;
+  }
+`;
+
+export const H1 = styled.h1`
+  position: absolute;
+  opacity: 0;
 `;
 
 export const Image = styled.img`
   width: 50px;
   height: 50px;
-  margin-left: 10px;
-
-  @media screen and (max-width: 1156px) {
-    margin-left: 20px;
-  }
 `;

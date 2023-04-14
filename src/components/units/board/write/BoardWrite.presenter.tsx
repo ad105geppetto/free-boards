@@ -65,20 +65,18 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
           value={props.contents}
           aria-label="내용"
         />
-        <S.SubmitWrapper>
-          <Link
-            href={`/free-boards/${
-              props.isEdit ? `${props.boardId}/edit` : "new"
-            }`}
-            passHref
+        <Link
+          href={`/free-boards/${
+            props.isEdit ? `${props.boardId}/edit` : "new"
+          }`}
+          passHref
+        >
+          <S.SubmitButton
+            onClick={props.isEdit ? props.onClickUpdate : props.onClickSubmit}
           >
-            <S.SubmitButton
-              onClick={props.isEdit ? props.onClickUpdate : props.onClickSubmit}
-            >
-              {props.isEdit ? "수정하기" : "등록하기"}
-            </S.SubmitButton>
-          </Link>
-        </S.SubmitWrapper>
+            {props.isEdit ? "수정하기" : "등록하기"}
+          </S.SubmitButton>
+        </Link>
       </S.Wapper>
     </S.Container>
   );

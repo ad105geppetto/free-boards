@@ -25,7 +25,7 @@ export const ArticleTop = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin: 12px 0;
+  padding: 12px 3px;
 `;
 
 export const BoardListButton = styled.a`
@@ -39,8 +39,12 @@ export const BoardListButton = styled.a`
   border: 1px solid #dddddd;
   border-radius: 2px;
   color: black;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   text-decoration: none;
+
+  :focus-visible {
+    outline: 2px solid red;
+  }
 
   :hover {
     background-color: black;
@@ -50,6 +54,7 @@ export const BoardListButton = styled.a`
 
 export const ArticleContentsBox = styled.section`
   padding: 29px 29px;
+  margin: 0 3px;
   border: 1px solid #ddd;
   border-radius: 6px;
 `;
@@ -79,7 +84,7 @@ export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: right;
-  margin-top: 10px;
+  padding: 10px 3px;
   gap: 20px;
 `;
 
@@ -90,8 +95,12 @@ export const DeleteButton = styled.button`
   border: 1px solid #dddddd;
   border-radius: 2px;
   background-color: white;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor: pointer;
+
+  :focus-visible {
+    outline: 2px solid red;
+  }
 
   :hover {
     background-color: black;
@@ -111,8 +120,12 @@ export const EditButton = styled.button`
   border: 1px solid #dddddd;
   border-radius: 2px;
   background-color: white;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor: pointer;
+
+  :focus-visible {
+    outline: 2px solid red;
+  }
 
   :hover {
     background-color: black;

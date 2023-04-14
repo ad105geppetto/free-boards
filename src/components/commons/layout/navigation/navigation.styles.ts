@@ -65,7 +65,7 @@ export const MenuGroup = styled.div`
 `;
 
 export const MenuWrapper = styled.h2`
-  padding: 0 10px;
+  padding: 10px 10px;
 
   @media screen and (max-width: 1156px) {
     padding: 15px 0;
@@ -79,6 +79,10 @@ export const Menu = styled.a`
   font-weight: 600;
   color: black;
   text-decoration: none;
+
+  :focus-visible {
+    outline: 2px solid red;
+  }
 
   &:after {
     display: block;

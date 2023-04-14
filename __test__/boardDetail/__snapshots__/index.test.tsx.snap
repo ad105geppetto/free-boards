@@ -9,53 +9,49 @@ exports[`자유게시판 상세 페이지 Unit Test 게시판 상세 페이지 �
       class="css-ztv6jj"
     >
       <div
-        class="css-1c0ijag"
+        class="css-2cj54t"
       >
         <a
-          class="css-qbet3h"
+          class="css-mq3wpp"
           href="/free-boards"
         >
           목록
         </a>
       </div>
-      <div
-        class="css-1adekgn"
+      <section
+        class="css-1sl02zy"
       >
-        <div
-          class="css-1ib302a"
+        <h3
+          class="css-xno0ws"
         >
-          <h3
-            class="css-xno0ws"
-          >
-            게시글 제목
-          </h3>
-          <div
-            class="css-rb483s"
-          >
-            홍길동
-          </div>
-          <div
-            class="css-uahybi"
-          >
-            2023.04.01. 15:37
-          </div>
+          게시글 제목
+        </h3>
+        <div
+          class="css-rb483s"
+        >
+          홍길동
+        </div>
+        <div
+          class="css-npfqe2"
+        >
+          2023.04.01. 15:37
         </div>
         <div
           class="css-lz1axn"
         >
           게시글 내용
         </div>
-      </div>
+      </section>
       <div
-        class="css-e2whbd"
+        class="css-1bzjq2p"
       >
         <button
-          class="css-sj9vjd"
+          class="css-gn3lwt"
         >
           게시글 삭제하기
         </button>
         <button
-          class="css-sj9vjd"
+          class="css-gn3lwt"
         >
           게시글 수정하기
         </button>

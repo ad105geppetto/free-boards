@@ -32,17 +32,16 @@ export const BoardTitle = styled.h3`
 `;
 
 export const BoardTable = styled.div`
-  margin-top: 1px;
-  margin-right: -2px;
+  padding: 5px;
 `;
 
 export const BoardHeader = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
+  padding-top: 1px;
   font-weight: 700;
   text-align: center;
-  border-top: 1px solid black;
 `;
 
 export const Board = styled.a`
@@ -51,7 +50,13 @@ export const Board = styled.a`
   width: 100%;
   text-decoration: none;
   color: black;
+  box-shadow: inset 0 0 0 3px white;
+  outline: none;
   cursor: pointer;
+
+  :focus-visible {
+    box-shadow: inset 0 0 0 3px red;
+  }
 `;
 
 export const Number = styled.div`
@@ -76,7 +81,7 @@ export const Number = styled.div`
 `;
 
 export const Writer = styled.div`
-  width: 15%;
+  width: calc(15% + 3px);
   margin-top: -1px;
   margin-left: -1px;
   padding: 10px 0;
@@ -123,7 +128,7 @@ export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: right;
-  margin-top: 10px;
+  padding-top: 10px;
 `;
 
 export const WriteButton = styled.a`
@@ -133,13 +138,18 @@ export const WriteButton = styled.a`
   align-items: center;
   width: 120px;
   height: 36px;
+  margin: 3px;
   font-weight: 600;
   border: 1px solid #dddddd;
   border-radius: 2px;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   background-color: white;
   color: black;
   text-decoration: none;
+
+  :focus-visible {
+    outline: 2px solid red;
+  }
 
   :hover {
     background-color: black;
@@ -162,12 +172,17 @@ export const PagenationGroup = styled.div`
 export const PrevButton = styled.button`
   height: 40px;
   padding: 0 5px;
+  margin: 3px;
   font-weight: 600;
   border: 1px solid #dddddd;
   border-radius: 2px;
   background-color: white;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor: pointer;
+
+  :focus-visible {
+    outline: 2px solid red;
+  }
 
   :hover {
     background-color: black;
@@ -182,12 +197,17 @@ export const PrevButton = styled.button`
 export const NextButton = styled.button`
   height: 40px;
   padding: 0 5px;
+  margin: 3px;
   font-weight: 600;
   border: 1px solid #dddddd;
   border-radius: 2px;
   background-color: white;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor: pointer;
+
+  :focus-visible {
+    outline: 2px solid red;
+  }
 
   :hover {
     background-color: black;

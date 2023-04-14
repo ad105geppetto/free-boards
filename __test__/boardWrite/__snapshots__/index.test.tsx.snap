@@ -5,54 +5,54 @@ exports[`자유게시판 등록 페이지 Unit Test 게시판 등록 페이지 �
   <div
     class="css-1ol1jm3"
   >
-    <div
-      class="css-ztv6jj"
+    <section
+      class="css-13c9wjq"
     >
-      <div
-        class="css-1sfvxye"
+      <h3
+        class="css-lt8ptt"
       >
-        <h1
-          class="css-6mhaqy"
-        >
-          게시글 
-          등록
-        </h1>
-        <a
-          class="css-1h0ga97"
-          href="/free-boards/new"
-        >
-          등록하기
-        </a>
-      </div>
+        게시글 
+        등록
+      </h3>
       <div
         class="css-1d57vsu"
       >
         <input
-          class="css-5ayked"
+          aria-label="작성자명"
+          class="css-4uhr0z"
           placeholder="작성자명을 입력해주세요."
           type="text"
           value=""
         />
         <input
+          aria-label="비밀번호"
           autocomplete="off"
-          class="css-5ayked"
+          class="css-4uhr0z"
           placeholder="비밀번호를 입력해주세요."
           type="password"
         />
       </div>
       <input
-        class="css-15hy2u7"
+        aria-label="제목"
+        class="css-4uhr0z"
         placeholder="제목을 입력해주세요."
         type="text"
         value=""
       />
       <input
-        class="css-1u3mfel"
+        aria-label="내용"
+        class="css-vbucm9"
         placeholder="내용을 입력해주세요."
         type="text"
         value=""
       />
-    </div>
+      <a
+        class="css-964atj"
+        href="/free-boards/new"
+      >
+        등록하기
+      </a>
+    </section>
   </div>
 </div>
 `;
@@ -62,39 +62,37 @@ exports[`자유게시판 수정 페이지 Unit Test 게시판 수정 페이지 �
   <div
     class="css-1ol1jm3"
   >
-    <div
-      class="css-ztv6jj"
+    <section
+      class="css-13c9wjq"
     >
-      <div
-        class="css-1sfvxye"
+      <h3
+        class="css-lt8ptt"
       >
-        <h1
-          class="css-6mhaqy"
-        >
-          게시글 
-          수정
-        </h1>
-        <a
-          class="css-1h0ga97"
-          href="/free-boards/undefined/edit"
-        >
-          수정하기
-        </a>
-      </div>
+        게시글 
+        수정
+      </h3>
       
       <input
-        class="css-15hy2u7"
+        aria-label="제목"
+        class="css-4uhr0z"
         placeholder="제목을 입력해주세요."
         type="text"
         value="게시글 제목"
       />
       <input
-        class="css-1u3mfel"
+        aria-label="내용"
+        class="css-vbucm9"
         placeholder="내용을 입력해주세요."
         type="text"
         value="게시글 내용"
       />
-    </div>
+      <a
+        class="css-964atj"
+        href="/free-boards/undefined/edit"
+      >
+        수정하기
+      </a>
+    </section>
   </div>
 </div>
 `;

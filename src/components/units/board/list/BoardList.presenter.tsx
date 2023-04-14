@@ -42,7 +42,6 @@ export default function BoardListUI(props: IBoardListUIProps) {
             <Loading />
           )}
         </S.BoardTable>
-
         <S.ButtonWrapper>
           <Link href={`${props.pathname}new`} passHref>
             <S.WriteButton>게시글 작성</S.WriteButton>

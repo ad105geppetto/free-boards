@@ -24,36 +24,36 @@ export const Wapper = styled.section`
 
 export const BoardWriteTitle = styled.h3`
   font-size: 32px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin: 20px 3px 10px;
 
   @media screen and (max-width: 1156px) {
     font-size: 24px;
   }
 `;
 
-export const SubmitWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 20px;
-  margin-bottom: 10px;
-`;
-
 export const SubmitButton = styled.a`
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100px;
   height: 36px;
+  top: 0;
+  right: 3px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   border: 1px solid #dddddd;
   border-radius: 2px;
   color: black;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-radius 0.3s ease-in-out;
 
+  :focus-visible {
+    outline: 2px solid red;
+  }
   :hover {
     background-color: black;
     color: white;
@@ -69,27 +69,45 @@ export const UserInfoWrapper = styled.div`
 `;
 
 export const Writer = styled.input`
-  width: 100%;
+  width: calc(100% - 6px);
   height: 40px;
   padding: 10px 12px;
+  margin: 12px 3px 3px 3px;
+
+  :focus-visible {
+    outline: 2px solid red;
+  }
 `;
 
 export const Password = styled.input`
-  width: 100%;
+  width: calc(100% - 6px);
   height: 40px;
   padding: 10px 12px;
+  margin: 12px 3px 3px 3px;
+
+  :focus-visible {
+    outline: 2px solid red;
+  }
 `;
 
 export const Title = styled.input`
-  width: 100%;
+  width: calc(100% - 6px);
   height: 40px;
   padding: 10px 12px;
-  margin-top: 12px;
+  margin: 12px 3px 3px 3px;
+
+  :focus-visible {
+    outline: 2px solid red;
+  }
 `;
 
 export const Contents = styled.input`
-  width: 100%;
+  width: calc(100% - 6px);
   height: 400px;
   padding: 10px 12px;
-  margin-top: 12px;
+  margin: 12px 3px 3px 3px;
+
+  :focus-visible {
+    outline: 2px solid red;
+  }
 `;

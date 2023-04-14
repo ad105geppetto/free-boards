@@ -5,19 +5,19 @@ exports[`자유게시판 목록 페이지 Unit Test 게시판 목록 페이지 �
   <div
     class="css-1ol1jm3"
   >
-    <div
+    <section
       class="css-ztv6jj"
     >
-      <h1
+      <h3
         class="css-pd6ube"
       >
         자유게시판
-      </h1>
+      </h3>
       <div
-        class="css-1g59mep"
+        class="css-1hstsbv"
       >
         <div
-          class="css-1lwxz1p"
+          class="css-vmu8p2"
         >
           <div
             class="css-1kfaxq7"
@@ -30,13 +30,13 @@ exports[`자유게시판 목록 페이지 Unit Test 게시판 목록 페이지 �
             제목
           </div>
           <div
-            class="css-18nwc06"
+            class="css-yd5q4q"
           >
             작성자
           </div>
         </div>
         <a
-          class="css-vuwrb"
+          class="css-x243er"
           href="/free-boards/ih2dfdf2"
         >
           <div
@@ -50,13 +50,13 @@ exports[`자유게시판 목록 페이지 Unit Test 게시판 목록 페이지 �
             한글오라와와와와와와와와와와와와와와와와
           </div>
           <div
-            class="css-18nwc06"
+            class="css-yd5q4q"
           >
             한글이름입니다앙
           </div>
         </a>
         <a
-          class="css-vuwrb"
+          class="css-x243er"
           href="/free-boards/nrfdhd89"
         >
           <div
@@ -70,13 +70,13 @@ exports[`자유게시판 목록 페이지 Unit Test 게시판 목록 페이지 �
             한글오라와와와와와와와와와와와와와와와와
           </div>
           <div
-            class="css-18nwc06"
+            class="css-yd5q4q"
           >
             한글이름입니다앙
           </div>
         </a>
         <a
-          class="css-vuwrb"
+          class="css-x243er"
           href="/free-boards/hkjjhkec4t"
         >
           <div
@@ -90,13 +90,13 @@ exports[`자유게시판 목록 페이지 Unit Test 게시판 목록 페이지 �
             한글오라와와와와와와와와와와와와와와와와
           </div>
           <div
-            class="css-18nwc06"
+            class="css-yd5q4q"
           >
             한글이름입니다앙
           </div>
         </a>
         <a
-          class="css-vuwrb"
+          class="css-x243er"
           href="/free-boards/sdfdsfsjhhj"
         >
           <div
@@ -110,13 +110,13 @@ exports[`자유게시판 목록 페이지 Unit Test 게시판 목록 페이지 �
             한글오라와와와와와와와와와와와와와와와와
           </div>
           <div
-            class="css-18nwc06"
+            class="css-yd5q4q"
           >
             한글이름입니다앙
           </div>
         </a>
         <a
-          class="css-vuwrb"
+          class="css-x243er"
           href="/free-boards/ikfnsidfods"
         >
           <div
@@ -130,17 +130,17 @@ exports[`자유게시판 목록 페이지 Unit Test 게시판 목록 페이지 �
             한글오라와와와와와와와와와와와와와와와와
           </div>
           <div
-            class="css-18nwc06"
+            class="css-yd5q4q"
           >
             한글이름입니다앙
           </div>
         </a>
       </div>
       <div
-        class="css-yyp757"
+        class="css-1e9voc2"
       >
         <a
-          class="css-14p1hea"
+          class="css-1kb8w1a"
           href="/free-boards/new"
         >
           게시글 작성
@@ -150,17 +150,17 @@ exports[`자유게시판 목록 페이지 Unit Test 게시판 목록 페이지 �
         class="css-1yqh4in"
       >
         <button
-          class="css-g6di9l"
+          class="css-1eaf97t"
         >
           이전 페이지
         </button>
         <button
-          class="css-g6di9l"
+          class="css-1eaf97t"
         >
           다음 페이지
         </button>
       </div>
-    </div>
+    </section>
   </div>
 </div>
 `;

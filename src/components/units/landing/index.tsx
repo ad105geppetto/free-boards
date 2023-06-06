@@ -1,9 +1,22 @@
-import { ILandingUIProps } from "./Landing.types";
 import * as S from "./Landing.styles";
 import { itemsArr, images } from "./Landing.variables";
 import HeadMeta from "../../commons/meta";
+import useScrollAnimation from "../../commons/hooks/useScrollAnimation";
+import * as C from "../../../commons/constants";
 
-export default function LandingUI(props: ILandingUIProps) {
+export default function Landing() {
+  const listRef = useScrollAnimation<HTMLUListElement>(
+    ".list-item",
+    C.HIGHTLIGHT_START_Y,
+    C.HIGHTLIGHT_END_Y,
+    "on"
+  );
+  const imageListRef = useScrollAnimation<HTMLDivElement>(
+    ".image-icon",
+    C.SHOW_START_Y,
+    C.SHOW_END_Y
+  );
+
   return (
     <S.Container>
       <HeadMeta
@@ -30,14 +43,14 @@ export default function LandingUI(props: ILandingUIProps) {
             loading="lazy"
           />
         </S.DownArrowWrapper>
-        <S.ListWrapper ref={props.listRef}>
+        <S.ListWrapper ref={listRef}>
           {itemsArr.map((item, index) => (
             <S.ListItem key={index} className="list-item" itemUrl={item.url}>
               {item.title}
             </S.ListItem>
           ))}
         </S.ListWrapper>
-        <S.ImageIconWrapper ref={props.imageListRef}>
+        <S.ImageIconWrapper ref={imageListRef}>
           {images.map((image, index) => (
             <S.ImageIcon
               key={index}

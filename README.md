@@ -28,21 +28,27 @@
   - 모니터 1157px~
 - UI가 비슷한 페이지는 코드 재사용성을 높이고자 했습니다.
 - 배포 Link: [http://www.anonboard.kro.kr](http://www.anonboard.kro.kr)
+
   - **AWS 비용 문제로 인해 오전 9시부터 오후 6시까지만 운영합니다. 필요하신 경우 소프트웨어를 다운로드하신 후 확인해주시기 바랍니다.**
 
   ### 설치
+
   ```
   yarn install 또는 npm install
   ```
+
   ### 실행
+
   ```
   yarn dev 또는 npm run dev
   ```
+
   ### 테스트
+
   ```
   yarn test 또는 npm run test
   ```
-  
+
 ## 서비스 개요
 
 - 익명 게시판 서비스

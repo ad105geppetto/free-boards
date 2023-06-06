@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface Board {
   writer: string;
   title: string;
@@ -11,6 +13,7 @@ export interface IBoardDetailUIProps {
   board: Board | null;
   isOpen: boolean;
   errorMessage: string;
+  setErrorMessage: Dispatch<SetStateAction<string>>;
   isDeleteModalOpen: boolean;
   isUpdateModalOpen: boolean;
   onClickMoveToPage: (path: string) => () => void;

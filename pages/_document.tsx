@@ -6,6 +6,8 @@ export default function Document() {
       <Head />
       <body>
         <Main />
+        <div id="check-modal" />
+        <div id="error-modal" />
         <NextScript />
       </body>
     </Html>

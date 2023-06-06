@@ -1,8 +1,8 @@
 import * as S from "./BoardWrite.styles";
 import { IBoardWriteUIProps } from "./BoardWrite.types";
-import Modal02 from "../../../commons/modals/modal02";
 import HeadMeta from "../../../commons/meta";
 import Link from "next/link";
+import Modal from "../../../commons/modal";
 
 export default function BoardWriteUI(props: IBoardWriteUIProps) {
   return (
@@ -25,7 +25,7 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
         }
       />
       {props.isOpen && (
-        <Modal02 errorMessage={props.errorMessage} onClose={props.onClose} />
+        <Modal errorMessage={props.errorMessage} onClose={props.onClose} />
       )}
       <S.Wapper>
         <S.BoardWriteTitle>

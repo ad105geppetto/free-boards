@@ -13,6 +13,7 @@ export const propsMock = {
   errorMessage: "",
   isDeleteModalOpen: false,
   isUpdateModalOpen: false,
+  setErrorMessage: jest.fn(),
   onClickMoveToPage: jest.fn(),
   handleDelete: jest.fn(),
   handleEdit: jest.fn(),

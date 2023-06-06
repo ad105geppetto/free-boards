@@ -14,30 +14,30 @@ import {
 import { firebaseApp } from "../../../../commons/firebase";
 import { useState } from "react";
 import { useMoveToPage } from "../../../commons/hooks/useMoveToPage";
-import { Board } from "./BoardList.types";
+import { BoardData } from "./BoardList.types";
 import { useModalErrorState } from "../../../commons/hooks/useModalErrorState";
 import useFetchBoardsOnMount from "../../../commons/hooks/useFetchBoardsOnMount";
 
 export default function BoardList() {
-  const [boards, setBoards] = useState<Board[]>([]);
-  const [currentTopNumber, setCurrentTopNumber] = useState(0);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [lastPage, setLastPage] = useState(1);
+  const [boardData, setBoardData] = useState<BoardData>({
+    boards: [],
+    totalCount: 0,
+    currentPage: 1,
+    lastPage: 1,
+  });
   const { currentPath, onClickMoveToPage } = useMoveToPage();
   const { errorMessage, setErrorMessage, isOpen, onClose } =
     useModalErrorState();
 
   useFetchBoardsOnMount({
     currentPath,
-    setBoards,
-    setCurrentTopNumber,
-    setLastPage,
+    setBoardData,
     setErrorMessage,
     onClose,
   });
-
+  console.log("hihi");
   const onClickPrevButton = async () => {
-    if (currentPage <= 1) return;
+    if (boardData.currentPage <= 1) return;
 
     const type = currentPath.slice(1);
 
@@ -46,7 +46,7 @@ export default function BoardList() {
         collection(getFirestore(firebaseApp), type),
         where("deletedAt", "==", false),
         orderBy("date", "desc"),
-        endBefore(boards[0].date),
+        endBefore(boardData.boards[0].date),
         limitToLast(10)
       );
 
@@ -54,9 +54,12 @@ export default function BoardList() {
       const datas = result.docs.map((el) => ({ id: el.id, ...el.data() }));
 
       if (datas) {
-        setBoards(() => datas);
-        setCurrentPage((prev) => prev - 1);
-        setCurrentTopNumber((prev) => prev + 10);
+        setBoardData((prev) => ({
+          ...prev,
+          boards: datas,
+          currentPage: prev.currentPage - 1,
+          totalCount: prev.totalCount + 10,
+        }));
         return;
       }
     } catch (error) {
@@ -68,7 +71,7 @@ export default function BoardList() {
   };
 
   const onClickNextButton = async () => {
-    if (currentPage >= lastPage) return;
+    if (boardData.currentPage >= boardData.lastPage) return;
 
     const type = currentPath.slice(1);
 
@@ -77,7 +80,7 @@ export default function BoardList() {
         collection(getFirestore(firebaseApp), type),
         where("deletedAt", "==", false),
         orderBy("date", "desc"),
-        startAfter(boards[boards.length - 1].date),
+        startAfter(boardData.boards[boardData.boards.length - 1].date),
         limit(10)
       );
 
@@ -85,9 +88,12 @@ export default function BoardList() {
       const datas = result.docs.map((el) => ({ id: el.id, ...el.data() }));
 
       if (datas) {
-        setBoards(() => datas);
-        setCurrentPage((prev) => prev + 1);
-        setCurrentTopNumber((prev) => prev - 10);
+        setBoardData((prev) => ({
+          ...prev,
+          boards: datas,
+          currentPage: prev.currentPage + 1,
+          totalCount: prev.totalCount - 10,
+        }));
         return;
       }
     } catch (error) {
@@ -100,10 +106,10 @@ export default function BoardList() {
 
   return (
     <BoardListUI
-      boards={boards}
+      boards={boardData.boards}
       pathname={currentPath}
-      currentTopNumber={currentTopNumber}
-      lastPage={lastPage}
+      currentTopNumber={boardData.totalCount}
+      lastPage={boardData.lastPage}
       isOpen={isOpen}
       errorMessage={errorMessage}
       onClose={onClose}

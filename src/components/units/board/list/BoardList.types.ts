@@ -16,3 +16,10 @@ export interface IBoardListUIProps {
 export interface Board extends DocumentData {
   id: string;
 }
+
+export interface BoardData {
+  boards: Board[];
+  totalCount: number;
+  currentPage: number;
+  lastPage: number;
+}

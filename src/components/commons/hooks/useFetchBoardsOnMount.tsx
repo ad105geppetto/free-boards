@@ -10,18 +10,18 @@ import {
 } from "firebase/firestore";
 import { Dispatch, SetStateAction, useEffect } from "react";
 import { firebaseApp } from "../../../commons/firebase";
-import { Board } from "../../units/board/list/BoardList.types";
+import { BoardData } from "../../units/board/list/BoardList.types";
 
-interface IProps {
+interface IUseFetchBoardsOnMountProps {
   currentPath: string;
-  setBoards: Dispatch<SetStateAction<Board[]>>;
-  setCurrentTopNumber: Dispatch<SetStateAction<number>>;
-  setLastPage: Dispatch<SetStateAction<number>>;
+  setBoardData: Dispatch<SetStateAction<BoardData>>;
   setErrorMessage: Dispatch<SetStateAction<string>>;
   onClose: () => void;
 }
 
-export default function useFetchBoardsOnMount(props: IProps) {
+export default function useFetchBoardsOnMount(
+  props: IUseFetchBoardsOnMountProps
+) {
   useEffect(() => {
     async function fetchBoards() {
       const type = props.currentPath.slice(1);
@@ -45,9 +45,12 @@ export default function useFetchBoardsOnMount(props: IProps) {
         const totalCount = docSnapCount.data().count;
 
         if (datas) {
-          props.setBoards(datas);
-          props.setCurrentTopNumber(totalCount);
-          props.setLastPage(Math.ceil(totalCount / 10));
+          props.setBoardData((prev) => ({
+            ...prev,
+            boards: datas,
+            totalCount,
+            lastPage: Math.ceil(totalCount / 10),
+          }));
           return;
         }
       } catch (error) {
@@ -59,5 +62,5 @@ export default function useFetchBoardsOnMount(props: IProps) {
     }
 
     void fetchBoards();
-  }, []);
+  }, [props.onClose, props.currentPath]);
 }

@@ -1,5 +1,6 @@
 export const propsWriteMock = {
   isEdit: false,
+  boardId: "jdsk42634dsf2",
   writer: "",
   title: "",
   contents: "",
@@ -20,6 +21,7 @@ export const propsWriteMock = {
 
 export const propsEditMock = {
   isEdit: true,
+  boardId: "jdsk42634dsf2",
   writer: "홍길동",
   title: "게시글 제목",
   contents: "게시글 내용",

@@ -1,9 +1,9 @@
 import * as S from "./BoardList.styles";
 import { Board, IBoardListUIProps } from "./BoardList.types";
-import Modal02 from "../../../commons/modals/modal02";
 import HeadMeta from "../../../commons/meta";
 import Loading from "../../../commons/loading";
 import Link from "next/link";
+import Modal from "../../../commons/modal";
 
 export default function BoardListUI(props: IBoardListUIProps) {
   return (
@@ -14,7 +14,7 @@ export default function BoardListUI(props: IBoardListUIProps) {
         ogDescription="자유게시판 목록페이지에서는 다양한 주제의 게시글들을 확인하실 수 있습니다. 게시글의 제목과 작성자를 확인할 수 있어서 원하는 내용을 쉽게 찾아보실 수 있습니다."
       />
       {props.isOpen && (
-        <Modal02 errorMessage={props.errorMessage} onClose={props.onClose} />
+        <Modal errorMessage={props.errorMessage} onClose={props.onClose} />
       )}
       <S.Wapper>
         <S.BoardTitle>자유게시판</S.BoardTitle>

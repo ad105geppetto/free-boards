@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const ModalWrapper = styled.div`
+export const ModalWrapper = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -10,7 +10,6 @@ export const ModalWrapper = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
   background-color: rgba(0, 0, 0, 0.3);
 `;
 
@@ -25,17 +24,17 @@ export const Modal = styled.div`
   }
 `;
 
-export const TitleWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  background-color: #800080;
-`;
+interface IBGColorProps {
+  isError: string;
+}
 
-export const ModalTitle = styled.h3`
+export const ModalTitle = styled.h1`
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
   font-size: 24px;
+  background-color: ${(props: IBGColorProps) =>
+    props.isError !== undefined ? "#ffa500" : "#800080"};
   color: white;
 `;
 
@@ -66,6 +65,29 @@ export const SubmitWrapper = styled.div`
 `;
 
 export const Submit = styled.button`
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ddd;
+  background-color: white;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 0 0 0 3px white;
+  outline: none;
+  cursor: pointer;
+
+  :focus-visible {
+    box-shadow: inset 0 0 0 3px red;
+  }
+
+  :hover {
+    background-color: #ffa500;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    box-shadow: inset 0 0 0 3px #ffa500;
+  }
+`;
+
+export const CheckSubmit = styled.button`
   width: 50%;
   border: none;
   border-top: 1px solid #ddd;

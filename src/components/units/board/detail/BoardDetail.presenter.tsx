@@ -1,10 +1,8 @@
 import * as S from "./BoardDetail.styles";
 import { IBoardDetailUIProps } from "./BoardDetail.type";
-import Modal01 from "../../../commons/modals/modal01";
-import Modal02 from "../../../commons/modals/modal02";
-import Modal03 from "../../../commons/modals/modal03";
 import HeadMeta from "../../../commons/meta";
 import Link from "next/link";
+import Modal from "../../../commons/modal";
 
 export default function BoardDetailUI(props: IBoardDetailUIProps) {
   return (
@@ -15,16 +13,25 @@ export default function BoardDetailUI(props: IBoardDetailUIProps) {
         ogDescription="자유게시판은 자유롭게 글을 올리고 소통할 수 있는 공간입니다. 다양한 주제의 글들이 올라와 있어서 언제나 새로운 정보와 이야기를 만날 수 있습니다."
       />
       {props.isDeleteModalOpen && (
-        <Modal01
+        <Modal
           password={props.board?.password}
           onClose={props.handleDelete}
+          onCloseError={props.onClose}
+          setErrorMessage={props.setErrorMessage}
+          isEdit={false}
         />
       )}
       {props.isUpdateModalOpen && (
-        <Modal03 password={props.board?.password} onClose={props.handleEdit} />
+        <Modal
+          password={props.board?.password}
+          onClose={props.handleEdit}
+          onCloseError={props.onClose}
+          setErrorMessage={props.setErrorMessage}
+          isEdit={true}
+        />
       )}
       {props.isOpen && (
-        <Modal02 errorMessage={props.errorMessage} onClose={props.onClose} />
+        <Modal errorMessage={props.errorMessage} onClose={props.onClose} />
       )}
       <S.Wapper>
         <S.ArticleTop>

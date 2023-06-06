@@ -8,7 +8,8 @@ export default function BoardDetail(props: any) {
   const [type] = currentPath.split("/").slice(1);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [isUpdateModalOpen, setIsUpdateModalOpen] = useState(false);
-  const { errorMessage, isOpen, onClose } = useModalErrorState();
+  const { errorMessage, setErrorMessage, isOpen, onClose } =
+    useModalErrorState();
 
   const handleDelete = () => {
     setIsDeleteModalOpen((prev) => !prev);
@@ -24,6 +25,7 @@ export default function BoardDetail(props: any) {
       board={props.board}
       isOpen={isOpen}
       errorMessage={errorMessage}
+      setErrorMessage={setErrorMessage}
       isDeleteModalOpen={isDeleteModalOpen}
       isUpdateModalOpen={isUpdateModalOpen}
       onClickMoveToPage={onClickMoveToPage}

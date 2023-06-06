@@ -155,7 +155,7 @@ export default function BoardWrite(props: IBoardWriteProps) {
   const onClickUpdate = async () => {
     const [collectionId, fieldId] = currentPath.split("/").slice(1);
     const board = doc(getFirestore(firebaseApp), collectionId, fieldId);
-    console.log(writer, title, contents);
+
     try {
       await updateDoc(board, {
         writer,

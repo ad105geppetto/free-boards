@@ -26,15 +26,26 @@
   - 폰 ~767px
   - 태블릿 768px~1156px
   - 모니터 1157px~
-- UI가 비슷한 페이지는 코드 재사용성을 높이고자 했습니다.
-- 배포 Link: [http://www.anonboard.kro.kr](http://www.anonboard.kro.kr)
-
-  - **AWS 비용 문제로 인해 오전 9시부터 오후 6시까지만 운영합니다. 필요하신 경우 소프트웨어를 다운로드하신 후 확인해주시기 바랍니다.**
+- 배포 Link: [https://free-boards.vercel.app](https://free-boards.vercel.app/)
 
   ### 설치
 
   ```
   yarn install 또는 npm install
+  ```
+
+  ### 환경 변수 설정
+
+  ```
+  // .env.example 파일을 .env로 이름 변경합니다.
+
+  NEXT_PUBLIC_API_KEY= { Firebase apiKey }
+  NEXT_PUBLIC_AUTH_DOMAIN= { Firebase authDomain }
+  NEXT_PUBLIC_PROJECT_ID= { Firebase projectId }
+  NEXT_PUBLIC_STORAGE_BUCKET= { Firebase storageBucket }
+  NEXT_PUBLIC_MESSAGING_SENDER_ID= { Firebase messagingSenderId }
+  NEXT_PUBLIC_APP_ID= { Firebase appId }
+  NEXT_PUBLIC_MEASUREMENT_ID= { Firebase measurementId }
   ```
 
   ### 실행
@@ -63,7 +74,7 @@
   - 제목과 본문 모두 이모지가 포함될 수 있습니다.
 - 사용자는 게시글을 올릴 때 비밀번호를 설정할 수 있습니다. 추후 본인이 작성한 게시물에 비밀번호 입력 후 수정, 삭제할 수 있습니다.
   - 회원 가입, 로그인 없이 비밀번호만 일치하면 수정, 삭제가 가능합니다.
-  - 비밀번호는 비밀번호는 6~12자 이며, 공백이 불가합니다.
+  - 비밀번호는 비밀번호는 12자까지이며, 공백이 불가합니다.
 - 모든 사용자는 한 페이지 내에서 모든 게시글을 최신 글 순서로 확인할 수 있습니다.
 - 스크롤 이벤트를 기반으로 상호작용하는 Landing Page를 제공합니다.
 
